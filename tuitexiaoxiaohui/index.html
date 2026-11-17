@@ -1,0 +1,1173 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>推特小小绘在线免费观看-播放渠道与画风解析</title>
+<meta name="description" content="推特小小绘在线免费观看：汇总X平台短篇动画的公开播放渠道、字幕版本与更新节奏，梳理小小绘系列角色设定、分镜风格，附免费观看入口判断、常见问题与观众反馈，帮你在合法来源找到可看的集数。">
+<meta name="keywords" content="推特小小绘在线免费观看">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d2a4a'/%3E%3Cpath d='M18 44c6-4 8-10 7-16 5 1 9 5 10 11 3-3 5-7 5-12 5 4 7 10 5 16-2 7-9 11-16 9-5-1-9-4-11-8z' fill='%23f5b942'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1c2230;
+  --ink-soft:#4a5468;
+  --muted:#6f7a8e;
+  --line:#dfe3ec;
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --brand:#1d2a4a;
+  --brand-2:#2f4370;
+  --accent:#e8912a;
+  --accent-soft:#fdf1dd;
+  --teal:#1f7a6b;
+  --teal-soft:#e6f3f0;
+  --rose:#a53a4f;
+  --rose-soft:#fbeaee;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 1px 2px rgba(22,32,54,.06),0 6px 20px rgba(22,32,54,.06);
+  --shadow-hover:0 2px 4px rgba(22,32,54,.08),0 12px 28px rgba(22,32,54,.10);
+  --sp:clamp(14px,2.2vw,26px);
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
+  --declare-h:38px;
+  --head-h:64px;
+  --sticky:calc(var(--declare-h) + var(--head-h));
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);
+  line-height:1.78;font-size:16px;-webkit-text-size-adjust:100%;
+}
+img{max-width:100%;display:block}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{margin:0;line-height:1.4;font-weight:700;letter-spacing:.2px}
+p{margin:0 0 .85em}
+ul,ol{margin:0 0 .9em;padding-left:1.25em}
+li{margin:.3em 0}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+.wrap{width:min(1180px,100% - 2*var(--sp));margin-inline:auto}
+[id]{scroll-margin-top:calc(var(--sticky) + 14px)}
+
+/* 公告条 */
+.declare{
+  position:sticky;top:0;z-index:60;height:var(--declare-h);
+  background:linear-gradient(90deg,#1d2a4a,#2b3c63 55%,#1d2a4a);
+  color:#eaeef8;font-size:13px;display:flex;align-items:center;
+}
+.declare .wrap{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:nowrap;overflow:hidden}
+.declare b{color:#f5b942;font-weight:700;white-space:nowrap}
+.declare span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.declare time{color:#b9c6e4;white-space:nowrap}
+
+/* 页头 */
+.site-head{
+  position:sticky;top:var(--declare-h);z-index:55;height:var(--head-h);
+  background:rgba(255,255,255,.94);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.site-head .wrap{height:100%;display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.brand svg{width:34px;height:34px;flex:none}
+.brand-text{font-size:17px;font-weight:800;color:var(--brand);white-space:nowrap}
+.nav-main{display:flex;gap:4px;margin-left:auto;align-items:center;flex-wrap:nowrap}
+.nav-main a{
+  padding:7px 11px;border-radius:8px;font-size:14.5px;color:var(--ink-soft);
+  white-space:nowrap;
+}
+.nav-main a:hover{background:#eef1f8;color:var(--brand);text-decoration:none}
+.head-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.search-box{display:flex;align-items:center;background:#f1f3f9;border:1px solid var(--line);border-radius:999px;padding:4px 6px 4px 12px}
+.search-box input{
+  border:0;background:transparent;font:inherit;font-size:14px;width:120px;color:var(--ink);
+  outline:none;padding:2px 0;
+}
+.search-box button{
+  border:0;background:var(--brand);color:#fff;border-radius:999px;cursor:pointer;
+  font:inherit;font-size:13px;padding:5px 12px;
+}
+.search-box button:hover{background:var(--brand-2)}
+.menu-btn{
+  display:none;border:1px solid var(--line);background:#fff;border-radius:9px;
+  padding:7px 11px;font:inherit;font-size:14px;color:var(--brand);cursor:pointer;align-items:center;gap:6px;
+}
+.menu-btn .bars{display:inline-block;width:16px;height:2px;background:var(--brand);position:relative}
+.menu-btn .bars::before,.menu-btn .bars::after{content:"";position:absolute;left:0;width:16px;height:2px;background:var(--brand)}
+.menu-btn .bars::before{top:-5px}.menu-btn .bars::after{top:5px}
+.search-feedback{font-size:13px;color:var(--rose);margin-left:4px;white-space:nowrap}
+
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(1100px 420px at 82% -10%,rgba(232,145,42,.14),transparent 62%),
+    radial-gradient(800px 380px at 6% 0%,rgba(31,122,107,.12),transparent 60%),
+    linear-gradient(180deg,#fbfcff,#f3f5fb);
+  border-bottom:1px solid var(--line);
+}
+.hero .wrap{
+  display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+  gap:clamp(20px,3.4vw,48px);align-items:center;padding-block:clamp(28px,4.4vw,56px);
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--teal);
+  background:var(--teal-soft);border:1px solid #c8e6df;border-radius:999px;padding:4px 12px;margin-bottom:14px;
+}
+.hero h1{font-size:clamp(26px,4.1vw,42px);color:var(--brand);letter-spacing:.5px}
+.hero-sub{margin-top:6px;font-size:clamp(15px,1.7vw,17px);color:var(--ink-soft);max-width:46em}
+.hero-sub b{color:var(--brand);font-weight:700}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 20px}
+.chip{
+  font-size:13px;background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:4px 11px;color:var(--ink-soft);
+}
+.chip strong{color:var(--brand)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;border-radius:10px;padding:11px 20px;
+  font-size:15px;font-weight:600;border:1px solid transparent;transition:transform .16s ease,box-shadow .16s ease;
+}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:var(--shadow)}
+.btn-primary:hover{background:var(--brand-2);transform:translateY(-2px);box-shadow:var(--shadow-hover);text-decoration:none}
+.btn-ghost{background:#fff;border-color:var(--line);color:var(--brand)}
+.btn-ghost:hover{border-color:var(--brand-2);transform:translateY(-2px);text-decoration:none}
+
+/* 首屏原创视觉 */
+.hero-art{position:relative;aspect-ratio:1/.86;min-height:250px}
+.hero-art svg{width:100%;height:100%}
+.art-card{
+  position:absolute;background:#fff;border:1px solid var(--line);border-radius:12px;
+  box-shadow:var(--shadow);padding:9px 12px;font-size:12.5px;color:var(--ink-soft);
+}
+.art-card b{display:block;color:var(--brand);font-size:13.5px}
+
+/* 主体布局：左内容 + 右侧栏，平板单列，侧栏后置 */
+.layout{
+  display:grid;grid-template-columns:minmax(0,1fr) 302px;gap:clamp(18px,2.6vw,32px);
+  padding-block:clamp(22px,3vw,38px);align-items:start;
+}
+main{min-width:0}
+aside{display:flex;flex-direction:column;gap:18px;min-width:0}
+section.block{margin-bottom:clamp(20px,2.8vw,34px)}
+.sec-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.sec-head h2{font-size:clamp(19px,2.3vw,23px);color:var(--brand)}
+.sec-head .hint{font-size:13px;color:var(--muted)}
+.sec-head::after{content:"";flex:1;height:1px;background:var(--line);min-width:24px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(16px,2.2vw,24px)}
+.panel + .panel{margin-top:14px}
+
+/* 概览 */
+.overview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.ov-item{border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 14px;background:#fbfcfe}
+.ov-item h3{font-size:15px;color:var(--brand);margin-bottom:4px}
+.ov-item p{font-size:14px;margin:0;color:var(--ink-soft)}
+.ov-item .num{font-size:20px;font-weight:800;color:var(--accent)}
+
+/* 卡片网格 */
+.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;
+  transition:transform .16s ease,box-shadow .16s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.card img{width:100%;height:132px;object-fit:cover;background:#e8ebf2}
+.card-body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card-body h3{font-size:15.5px;color:var(--brand)}
+.card-body p{font-size:13.5px;color:var(--ink-soft);margin:0}
+.card-meta{font-size:12.5px;color:var(--muted);margin-top:auto;padding-top:6px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:#9a5c0d}
+.tag.teal{background:var(--teal-soft);color:var(--teal)}
+.tag.rose{background:var(--rose-soft);color:var(--rose)}
+
+/* 紧凑列表 */
+.tight-list{list-style:none;padding:0;margin:0}
+.tight-list li{
+  display:grid;grid-template-columns:88px minmax(0,1fr) auto;gap:12px;align-items:baseline;
+  padding:10px 0;border-bottom:1px dashed var(--line);font-size:14.5px;
+}
+.tight-list li:last-child{border-bottom:0}
+.tight-list time{color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
+.tight-list .li-title{color:var(--ink);font-weight:600}
+.tight-list .li-title:hover{color:var(--brand-2)}
+.tight-list .badge{font-size:12px;color:var(--teal);background:var(--teal-soft);border-radius:999px;padding:1px 9px;white-space:nowrap}
+
+/* 分类入口：标签索引 */
+.cat-index{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.cat-item{
+  border:1px solid var(--line);border-radius:var(--radius-sm);background:#fbfcfe;
+  padding:10px 12px;display:flex;flex-direction:column;gap:2px;
+}
+.cat-item a{font-weight:700;font-size:14.5px;color:var(--brand)}
+.cat-item span{font-size:12.5px;color:var(--muted)}
+
+/* 深度解析 */
+.deep .lede{font-size:15.5px;color:var(--ink-soft);border-left:3px solid var(--accent);padding-left:14px;margin-bottom:18px}
+.deep h3{font-size:17px;color:var(--brand);margin:20px 0 8px}
+.deep h3 + p{margin-top:0}
+.claim{
+  background:var(--accent-soft);border:1px solid #f2d9ae;border-radius:var(--radius-sm);
+  padding:12px 16px;font-size:15px;color:#6b4308;margin:14px 0;
+}
+.claim b{color:#4a2f05}
+.compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0}
+.compare > div{border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 14px;background:#fbfcfe}
+.compare h4{font-size:14px;color:var(--teal);margin-bottom:6px;letter-spacing:.3px}
+.compare.side-b h4{color:var(--rose)}
+.checklist{list-style:none;padding:0}
+.checklist li{padding-left:24px;position:relative;font-size:14.5px;color:var(--ink-soft)}
+.checklist li::before{
+  content:"✓";position:absolute;left:0;top:0;color:var(--teal);font-weight:700;
+}
+.quote-card{
+  border-left:4px solid var(--brand-2);background:#f4f6fc;border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  padding:12px 16px;font-size:14.5px;color:var(--ink-soft);margin:14px 0;
+}
+.quote-card cite{display:block;font-size:12.5px;color:var(--muted);font-style:normal;margin-top:6px}
+
+/* 步骤 */
+.steps{counter-reset:s;list-style:none;padding:0;display:grid;gap:12px;margin:0}
+.steps li{
+  counter-increment:s;position:relative;padding:12px 14px 12px 52px;
+  border:1px solid var(--line);border-radius:var(--radius-sm);background:#fbfcfe;
+}
+.steps li::before{
+  content:counter(s);position:absolute;left:12px;top:12px;width:28px;height:28px;
+  border-radius:50%;background:var(--brand);color:#fff;font-weight:700;font-size:14px;
+  display:grid;place-items:center;
+}
+.steps h3{font-size:15px;color:var(--brand);margin-bottom:2px}
+.steps p{font-size:14px;margin:0;color:var(--ink-soft)}
+
+/* FAQ */
+details.faq{
+  border:1px solid var(--line);border-radius:var(--radius-sm);background:#fff;margin-bottom:10px;
+  padding:0;overflow:hidden;
+}
+details.faq summary{
+  cursor:pointer;list-style:none;padding:12px 42px 12px 16px;font-weight:600;font-size:15px;color:var(--brand);
+  position:relative;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{
+  content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);
+  font-size:19px;color:var(--accent);font-weight:700;
+}
+details.faq[open] summary::after{content:"–"}
+details.faq .ans{padding:0 16px 14px;font-size:14.5px;color:var(--ink-soft)}
+details.faq[open]{border-color:#c9d3ea;box-shadow:var(--shadow)}
+
+/* 评论 */
+.comment-list{display:grid;gap:12px}
+.comment{
+  border:1px solid var(--line);border-radius:var(--radius-sm);background:#fff;padding:12px 14px;
+}
+.comment header{display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap}
+.avatar{
+  width:26px;height:26px;border-radius:50%;background:var(--brand);color:#fff;font-size:12px;
+  display:grid;place-items:center;font-weight:700;flex:none;
+}
+.comment .who{font-size:13.5px;font-weight:700;color:var(--brand)}
+.comment .when{font-size:12px;color:var(--muted);margin-left:auto}
+.comment p{font-size:14.5px;margin:0;color:var(--ink-soft)}
+.comment .ref{color:var(--brand-2);font-weight:600}
+.comment.neutral{background:#fbfcfe}
+
+/* 相关推荐标签 */
+.tag-cloud{display:flex;flex-wrap:wrap;gap:8px}
+.tag-cloud a{
+  font-size:13.5px;padding:6px 13px;border-radius:999px;background:#fff;border:1px solid var(--line);
+  color:var(--ink-soft);transition:transform .14s ease;
+}
+.tag-cloud a:hover{color:var(--brand);border-color:var(--brand-2);transform:translateY(-1px);text-decoration:none}
+
+/* 时间线 */
+.timeline{list-style:none;padding:0;margin:0;position:relative}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline li{position:relative;padding:0 0 14px 28px}
+.timeline li::before{
+  content:"";position:absolute;left:2px;top:7px;width:12px;height:12px;border-radius:50%;
+  background:#fff;border:2px solid var(--brand-2);
+}
+.timeline time{font-size:12.5px;color:var(--accent);font-weight:700}
+.timeline h3{font-size:14.5px;color:var(--brand);margin:1px 0 2px}
+.timeline p{font-size:13.5px;color:var(--ink-soft);margin:0}
+
+/* 可信度分层 */
+.tier{display:grid;gap:10px}
+.tier-row{border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 14px;background:#fff;display:grid;grid-template-columns:64px minmax(0,1fr);gap:12px;align-items:start}
+.tier-row .lv{font-size:13px;font-weight:800;color:#fff;background:var(--teal);border-radius:6px;text-align:center;padding:4px 0}
+.tier-row.b .lv{background:var(--brand-2)}
+.tier-row.c .lv{background:var(--rose)}
+.tier-row h3{font-size:14.5px;color:var(--brand);margin-bottom:2px}
+.tier-row p{font-size:13.5px;margin:0;color:var(--ink-soft)}
+
+/* 侧栏 */
+.aside-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px}
+.aside-card h2{font-size:15.5px;color:var(--brand);margin-bottom:10px}
+.aside-card h3{font-size:14px;color:var(--brand);margin:12px 0 4px}
+.side-nav{list-style:none;padding:0;margin:0;display:grid;gap:2px}
+.side-nav a{
+  display:block;padding:7px 10px;border-radius:8px;font-size:14px;color:var(--ink-soft);
+  border-left:3px solid transparent;
+}
+.side-nav a:hover{background:#f1f4fb;text-decoration:none;color:var(--brand)}
+.side-nav a.active{background:#eef1f9;color:var(--brand);font-weight:700;border-left-color:var(--accent)}
+.side-list{list-style:none;padding:0;margin:0;font-size:13.5px}
+.side-list li{padding:7px 0;border-bottom:1px dashed var(--line);display:flex;justify-content:space-between;gap:10px;color:var(--ink-soft)}
+.side-list li:last-child{border-bottom:0}
+.side-list b{color:var(--accent);font-variant-numeric:tabular-nums}
+.side-note{font-size:12.5px;color:var(--muted);margin:8px 0 0}
+.tag-cloud.sm a{font-size:12.5px;padding:4px 10px}
+
+/* 页尾 */
+.site-foot{background:#18213a;color:#c6cfe3;margin-top:10px;padding-block:clamp(26px,3.6vw,44px) 20px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:22px}
+.site-foot .brand-text{color:#fff}
+.site-foot .brand svg{filter:brightness(1.15)}
+.foot-desc{font-size:13.5px;color:#a3b0ca;margin-top:10px;max-width:34em}
+.foot-col h3{font-size:14px;color:#fff;margin-bottom:8px}
+.foot-col ul{list-style:none;padding:0;margin:0;font-size:13.5px;display:grid;gap:5px}
+.foot-col a{color:#a9b6d1}
+.foot-col a:hover{color:#fff}
+.foot-bottom{
+  border-top:1px solid #2c3754;margin-top:24px;padding-top:14px;
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12.5px;color:#8f9cb8;
+}
+.foot-bottom a{color:#b8c4dd}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:18px;bottom:20px;z-index:50;
+  border:0;border-radius:999px;background:var(--brand);color:#fff;
+  width:46px;height:46px;font-size:18px;cursor:pointer;box-shadow:var(--shadow-hover);
+  opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .2s ease,transform .2s ease;
+}
+.to-top.show{opacity:1;pointer-events:auto;transform:none}
+.to-top:hover{background:var(--brand-2)}
+
+@media (max-width:1024px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  aside{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+  .hero .wrap{grid-template-columns:minmax(0,1fr)}
+  .hero-art{max-width:520px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .overview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cat-index{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:860px){
+  .nav-main{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;
+    padding:8px var(--sp) 14px;gap:2px;box-shadow:var(--shadow);
+  }
+  .nav-main.open{display:flex}
+  .nav-main a{padding:11px 8px;font-size:15px;border-radius:8px}
+  .menu-btn{display:inline-flex}
+  .site-head .wrap{position:relative}
+  .search-box input{width:88px}
+  .head-actions{margin-left:auto}
+}
+@media (max-width:620px){
+  body{font-size:15.5px}
+  aside{grid-template-columns:minmax(0,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .search-box input{width:70px}
+  .declare .wrap{justify-content:flex-start}
+  .declare span{flex:1}
+  .compare{grid-template-columns:minmax(0,1fr)}
+  .tight-list li{grid-template-columns:78px minmax(0,1fr);row-gap:2px}
+  .tight-list .badge{grid-column:2}
+}
+@media (max-width:520px){
+  .card-grid{grid-template-columns:minmax(0,1fr)}
+  .overview-grid{grid-template-columns:minmax(0,1fr)}
+  .cat-index{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .search-box{display:none}
+  .to-top{right:12px;bottom:14px;width:42px;height:42px}
+  .tier-row{grid-template-columns:52px minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .card:hover,.btn:hover,.tag-cloud a:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="declare" role="region" aria-label="站点更新公告">
+  <div class="wrap">
+    <b>更新公告</b>
+    <span>11月7日新增《小小绘·便利店夜班》第3话国语字幕；X 原帖播放量 41.6 万</span>
+    <time datetime="2026-11-08">2026-11-08</time>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/#top" aria-label="推特小小绘在线免费观看 首页">
+      <svg viewBox="0 0 64 64" role="img" aria-label="品牌标志：绘字笔触与屏幕轮廓">
+        <rect x="2" y="2" width="60" height="60" rx="14" fill="#1d2a4a"/>
+        <rect x="13" y="16" width="38" height="26" rx="4" fill="none" stroke="#f5b942" stroke-width="2.6"/>
+        <path d="M19 35c5-2 7-8 6-13 4 1 7 4 8 9 3-2 4-6 4-9 4 3 5 8 3 13-2 6-7 9-13 8-4-.6-7-3.4-8-8z" fill="#f5b942"/>
+        <rect x="26" y="46" width="12" height="3" rx="1.5" fill="#8fa3c9"/>
+      </svg>
+      <span class="brand-text">推特小小绘在线免费观看</span>
+    </a>
+
+    <nav class="nav-main" id="navMain" aria-label="主题频道导航">
+      <a href="/#channel">频道总览</a>
+      <a href="/#picks">精选推荐</a>
+      <a href="/#updates">更新日志</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">观看指南</a>
+      <a href="/#faq">常见问题</a>
+    </nav>
+
+    <div class="head-actions">
+      <div class="search-box" role="search">
+        <label for="siteSearch" class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">站内查找</label>
+        <input id="siteSearch" type="search" placeholder="查集数、角色、画风" autocomplete="off">
+        <button type="button" id="searchBtn">查找</button>
+      </div>
+      <span class="search-feedback" id="searchFeedback" role="status" aria-live="polite"></span>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="navMain">
+        <span class="bars" aria-hidden="true"></span>频道
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top" class="wrap" style="display:block;padding:0">
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="wrap">
+      <div>
+        <p class="hero-tag">X / 哔哩哔哩双端可查 · 短篇手绘动画</p>
+        <h1 id="heroTitle">推特小小绘在线免费观看</h1>
+        <p class="hero-sub">
+          小小绘是 2025 年起在 X 上以 30—90 秒短篇连载的手绘动画角色，创作者账号 <b>@xiaoxiao_hui</b> 定期发布原片，B 站与 YouTube 有授权搬运的国语字幕版。页面按集数、平台、画风线索整理公开可看的来源，标注哪些是原帖、哪些是二创。
+        </p>
+        <div class="hero-meta">
+          <span class="chip">已收录 <strong>46</strong> 部短篇</span>
+          <span class="chip">原帖账号 <strong>1</strong> 个</span>
+          <span class="chip">字幕版本 <strong>3</strong> 套</span>
+          <span class="chip">更新至 <strong>11月7日</strong></span>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="/#updates">看最新更新 →</a>
+          <a class="btn btn-ghost" href="/#guide">免费观看入口怎么找</a>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 380" role="img">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#eef2fb"/><stop offset="1" stop-color="#dfe6f5"/>
+            </linearGradient>
+          </defs>
+          <rect x="8" y="10" width="404" height="360" rx="26" fill="url(#g1)"/>
+          <g stroke="#c3cee4" stroke-width="1.2" stroke-dasharray="5 6">
+            <path d="M40 96h340M40 176h340M40 256h340M112 60v270M210 60v270M306 60v270"/>
+          </g>
+          <rect x="46" y="58" width="200" height="128" rx="12" fill="#fff" stroke="#c9d3ea"/>
+          <circle cx="70" cy="80" r="6" fill="#e8912a"/>
+          <circle cx="90" cy="80" r="6" fill="#1f7a6b"/>
+          <path d="M64 138c14-4 20-18 18-34 10 2 17 10 19 22 6-4 9-12 9-20 9 6 12 17 8 27-5 13-17 19-30 17-10-1.6-18-7-24-12z" fill="#2f4370"/>
+          <rect x="150" y="74" width="76" height="8" rx="4" fill="#c3cee4"/>
+          <rect x="150" y="92" width="58" height="8" rx="4" fill="#d9e0ee"/>
+          <rect x="150" y="150" width="46" height="8" rx="4" fill="#e8912a" opacity=".7"/>
+          <rect x="270" y="96" width="112" height="150" rx="12" fill="#1d2a4a"/>
+          <rect x="284" y="112" width="84" height="10" rx="5" fill="#8fa3c9"/>
+          <rect x="284" y="132" width="60" height="8" rx="4" fill="#57688f"/>
+          <path d="M296 168c11-3 16-14 14-26 8 1 13 8 15 17 5-3 7-9 7-15 7 5 9 13 6 21-4 10-13 15-23 13-8-1.4-14-5.6-19-10z" fill="#f5b942"/>
+          <rect x="284" y="204" width="72" height="7" rx="3.5" fill="#57688f"/>
+          <rect x="284" y="220" width="52" height="7" rx="3.5" fill="#57688f"/>
+          <rect x="46" y="220" width="200" height="120" rx="12" fill="#fff" stroke="#c9d3ea"/>
+          <rect x="64" y="242" width="120" height="9" rx="4.5" fill="#c3cee4"/>
+          <rect x="64" y="262" width="88" height="9" rx="4.5" fill="#d9e0ee"/>
+          <rect x="64" y="292" width="74" height="24" rx="12" fill="#1f7a6b" opacity=".85"/>
+          <rect x="150" y="292" width="74" height="24" rx="12" fill="#e8912a" opacity=".85"/>
+          <text x="196" y="356" font-size="12" fill="#6f7a8e" font-family="sans-serif">分镜 · 字幕 · 播放源</text>
+        </svg>
+        <div class="art-card" style="left:6%;bottom:4%">
+          <b>第 3 话 · 便利店夜班</b>国语字幕 1 分 12 秒
+        </div>
+        <div class="art-card" style="right:2%;top:6%">
+          <b>原帖发布时间</b>2026-11-07 21:40
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="layout" id="channel">
+    <main>
+
+      <!-- 1 领域概览 -->
+      <section class="block panel" id="overview" aria-labelledby="h-overview">
+        <div class="sec-head">
+          <h2 id="h-overview">小小绘短篇动画概览：它是什么、在哪儿发</h2>
+          <span class="hint">先弄清原帖与转载的差别</span>
+        </div>
+        <p>“小小绘”不是电视台番剧，而是单集 30—90 秒、以铅笔草稿叠加数码上色的 X 短篇系列。角色本身是一个圆脸小女孩，每条视频围绕一个日常场景展开：便利店、地铁换乘、便利店买关东煮。创作者 @xiaoxiao_hui 的发布习惯是每周二、周五各一集，节假日加更。</p>
+        <div class="overview-grid">
+          <div class="ov-item">
+            <h3>原片来源</h3>
+            <p><span class="num">1</span> 个 X 账号，视频贴直接在线播放，无需跳转。</p>
+          </div>
+          <div class="ov-item">
+            <h3>字幕版本</h3>
+            <p><span class="num">3</span> 套：简体中文、繁中、日语原文对照。</p>
+          </div>
+          <div class="ov-item">
+            <h3>单集时长</h3>
+            <p>30—90 秒，最长一集《末班车》1 分 47 秒。</p>
+          </div>
+          <div class="ov-item">
+            <h3>二次创作</h3>
+            <p>B 站模仿稿件约 17 个，台词改配居多。</p>
+          </div>
+          <div class="ov-item">
+            <h3>官方周边</h3>
+            <p>暂无，只有创作者在 X 置顶的设定图下载。</p>
+          </div>
+          <div class="ov-item">
+            <h3>语言</h3>
+            <p>原声为创作者本人配的中文，字幕由观众整理。</p>
+          </div>
+        </div>
+        <p style="margin-top:12px;font-size:14px;color:var(--muted)">区分要点：X 原帖是“首发源”，B 站搬运号 <a href="/#updates">绘酱搬运站</a> 负责压字幕，两者画面一致，但字幕轴快慢不同，观感差异集中在前 5 秒。</p>
+      </section>
+
+      <!-- 2 精选内容推荐 -->
+      <section class="block" id="picks" aria-labelledby="h-picks">
+        <div class="sec-head">
+          <h2 id="h-picks">精选内容推荐：六集值得先看的小小绘短篇</h2>
+          <span class="hint">按画风与叙事挑的</span>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <img src="https://picsum.photos/seed/xiaoxiao-hui-convenience/640/360" width="640" height="360" loading="lazy" alt="小小绘便利店夜班场景，货架与收银台的手绘分镜">
+            <div class="card-body">
+              <span class="tag">日常</span>
+              <h3>《便利店夜班》第 3 话</h3>
+              <p>收银机故障、找零硬币滚到货架下。全片只有三句台词，靠手指动作推进。</p>
+              <div class="card-meta"><span>11-07 发布</span><span>1 分 12 秒</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/xiaoxiao-hui-subway/640/360" width="640" height="360" loading="lazy" alt="地铁换乘通道里小小绘奔跑的手绘画面">
+            <div class="card-body">
+              <span class="tag teal">高频播放</span>
+              <h3>《换乘通道》</h3>
+              <p>X 原帖播放 82.3 万，被截成 GIF 传播最广的一集，转场用三格草稿连拍。</p>
+              <div class="card-meta"><span>10-21 发布</span><span>54 秒</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/xiaoxiao-hui-lasttrain/640/360" width="640" height="360" loading="lazy" alt="末班车车窗倒影里的小小绘，冷色调背景">
+            <div class="card-body">
+              <span class="tag rose">时长最长</span>
+              <h3>《末班车》</h3>
+              <p>1 分 47 秒，唯一一集用了吉他配乐，也是争议最大的一集，见深度解析。</p>
+              <div class="card-meta"><span>10-14 发布</span><span>1 分 47 秒</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/xiaoxiao-hui-oden/640/360" width="640" height="360" loading="lazy" alt="关东煮摊位前的暖色灯光与蒸汽">
+            <div class="card-body">
+              <span class="tag">入门</span>
+              <h3>《关东煮》</h3>
+              <p>第 1 话，人物设定尚未固定，脸部线条比后期粗，适合第一次看的人。</p>
+              <div class="card-meta"><span>09-30 发布</span><span>38 秒</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/xiaoxiao-hui-rainwindow/640/360" width="640" height="360" loading="lazy" alt="雨滴贴在窗玻璃上，室内人影模糊">
+            <div class="card-body">
+              <span class="tag teal">画风转折</span>
+              <h3>《雨天窗边》</h3>
+              <p>从这一集开始彩色部分改用手绘水彩扫描，数码平涂只保留在背景。</p>
+              <div class="card-meta"><span>10-28 发布</span><span>1 分 03 秒</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/xiaoxiao-hui-vending/640/360" width="640" height="360" loading="lazy" alt="自动售货机蓝光前掉落的饮料罐">
+            <div class="card-body">
+              <span class="tag">无声</span>
+              <h3>《售货机卡罐》</h3>
+              <p>没有台词也没有字幕，音效只有罐体碰撞。弹幕量最高的一集。</p>
+              <div class="card-meta"><span>11-04 发布</span><span>41 秒</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3 最新更新 -->
+      <section class="block panel" id="updates" aria-labelledby="h-updates">
+        <div class="sec-head">
+          <h2 id="h-updates">最新更新与播放源状态</h2>
+          <span class="hint">近 30 天，按平台分层</span>
+        </div>
+        <ul class="tight-list">
+          <li>
+            <time datetime="2026-11-07">11-07</time>
+            <a class="li-title" href="/#picks">《便利店夜班》第 3 话上架 X 原帖，同步 B 站字幕版</a>
+            <span class="badge">原片可用</span>
+          </li>
+          <li>
+            <time datetime="2026-11-04">11-04</time>
+            <a class="li-title" href="/#picks">《售货机卡罐》发布，无台词，音效由创作者手机实录</a>
+            <span class="badge">原片可用</span>
+          </li>
+          <li>
+            <time datetime="2026-11-01">11-01</time>
+            <a class="li-title" href="/#reviews">旧集《换乘通道》GIF 版本被转到小红书，画质压缩至 240p</a>
+            <span class="badge">画质偏低</span>
+          </li>
+          <li>
+            <time datetime="2026-10-28">10-28</time>
+            <a class="li-title" href="/#picks">《雨天窗边》上线，画风改为水彩扫描</a>
+            <span class="badge">原片可用</span>
+          </li>
+          <li>
+            <time datetime="2026-10-24">10-24</time>
+            <a class="li-title" href="/#deep">创作者在 X 回复确认《末班车》配乐为自制，非商用素材</a>
+            <span class="badge">回应</span>
+          </li>
+          <li>
+            <time datetime="2026-10-19">10-19</time>
+            <a class="li-title" href="/#guide">B 站搬运号“绘酱搬运站”更新繁中字幕版 21 集</a>
+            <span class="badge">字幕齐全</span>
+          </li>
+          <li>
+            <time datetime="2026-10-15">10-15</time>
+            <a class="li-title" href="/#channel">频道统计页显示：原帖平均播放 12.4 万，点赞率 3.1%</a>
+            <span class="badge">数据</span>
+          </li>
+          <li>
+            <time datetime="2026-10-12">10-12</time>
+            <a class="li-title" href="/#faq">YouTube 镜像频道被下架两集，原因未公开</a>
+            <span class="badge">来源减少</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 4 分类入口 -->
+      <section class="block" id="categories" aria-labelledby="h-cats">
+        <div class="sec-head">
+          <h2 id="h-cats">分类入口：按场景、角色和制作方式找</h2>
+          <span class="hint">10 个常用搜索词</span>
+        </div>
+        <div class="cat-index">
+          <div class="cat-item"><a href="/#picks">便利店场景</a><span>7 集，夜班光线为主</span></div>
+          <div class="cat-item"><a href="/#picks">地铁与换乘</a><span>5 集，快速转场多</span></div>
+          <div class="cat-item"><a href="/#picks">雨夜与车窗</a><span>4 集，水彩技法</span></div>
+          <div class="cat-item"><a href="/#guide">无台词短篇</a><span>9 集，靠音效</span></div>
+          <div class="cat-item"><a href="/#deep">铅笔草稿风</a><span>早期 12 集</span></div>
+          <div class="cat-item"><a href="/#deep">水彩扫描风</a><span>10-28 之后</span></div>
+          <div class="cat-item"><a href="/#reviews">二创改配音</a><span>B 站 17 个稿件</span></div>
+          <div class="cat-item"><a href="/#faq">国语字幕版</a><span>绘酱搬运站</span></div>
+          <div class="cat-item"><a href="/#faq">繁中字幕版</a><span>21 集</span></div>
+          <div class="cat-item"><a href="/#timeline">加更与停更</a><span>连续 11 周易错点</span></div>
+        </div>
+      </section>
+
+      <!-- 5 深度解析 -->
+      <section class="block panel deep" id="deep" aria-labelledby="h-deep">
+        <div class="sec-head">
+          <h2 id="h-deep">深度解析：小小绘为什么在 11 月之后变得“更安静”</h2>
+          <span class="hint">一个可被反驳的判断</span>
+        </div>
+        <p class="lede">判断先行：小小绘第 3 话《便利店夜班》之后，系列节奏从“动作驱动”转向“氛围驱动”，直接后果是单集播放量下降但完播率上升。这个转向不是创作者临时发挥，由两处可核对的细节锁定：10-28 起画风换材质，11-04 起台词数归零。</p>
+
+        <h3>一、两个时间点：水彩扫描与零台词</h3>
+        <p>10 月 28 日《雨天窗边》发布时，画面里的色块边缘带纸纹，与 10 月 21 日《换乘通道》的数码平涂对比明显。创作者 @xiaoxiao_hui 在 10-28 当天的回复里写“这集开始彩稿全手绘再扫描”，这条回复可在 X 原帖下方查到，时间戳为 22:16。</p>
+        <p>11 月 4 日《售货机卡罐》是系列第 44 条视频，全片 41 秒，没有一句台词，也没有字幕条。台词数量从第 40 集的 5 句降到 0 句。两件事叠在一起，意味着“氛围”取代“对白”承担叙事。</p>
+
+        <div class="claim"><b>判断</b>：这轮变化是创作者对 X 平台短播放机制的一次适配尝试，并非创作力波动。用一句可反驳的话说：如果 11 月下旬出现带大量对白的新集，这个判断就得推翻。</div>
+
+        <h3>二、播放量与完播率的一升一降</h3>
+        <div class="compare">
+          <div>
+            <h4>10 月前三周（对白驱动）</h4>
+            <ul style="margin:0;padding-left:1.1em;font-size:14px">
+              <li>平均播放 18.6 万</li>
+              <li>平均完播率约 31%</li>
+              <li>最高播放：《换乘通道》82.3 万</li>
+              <li>平均台词 4.3 句</li>
+            </ul>
+          </div>
+          <div class="side-b">
+            <h4>10-28 至 11-07（氛围驱动）</h4>
+            <ul style="margin:0;padding-left:1.1em;font-size:14px">
+              <li>平均播放 12.4 万</li>
+              <li>平均完播率约 47%</li>
+              <li>最高播放：《便利店夜班》第 3 话 41.6 万</li>
+              <li>平均台词 1.2 句</li>
+            </ul>
+          </div>
+        </div>
+        <p>播放下降 33%，完播率上升 16 个百分点。两个数字方向相反，说明推荐流量收紧但留住的人更多。对看短篇的观众来说，后者比前者更接近“看完”的体验。</p>
+
+        <h3>三、说法差异：《末班车》配乐的争议</h3>
+        <p>10 月 14 日《末班车》发布后，B 站搬运号评论区出现说法，称背景吉他是“某免费素材库第 7 号曲目”。10 月 24 日创作者在 X 回复称“自己弹的，录了两次”，并附了 9 秒录屏。两方说法无法从画面直接验证，属于典型转述与回应并存。可以确认的事实是：该集音轨与素材库曲目的节拍点对不上，节奏更慢，与手弹录制的特征一致。</p>
+        <div class="quote-card">
+          把三条线索排一下：原帖时间 10-14 22:03、争议出现 10-17、创作者回应 10-24。中间隔 7 天，回应晚于争议，但早于 10-28 的画风转换。
+          <cite>—— 时间线梳理，来源为 X 原帖与 B 站评论区公开内容</cite>
+        </div>
+
+        <h3>四、可核对的判断清单</h3>
+        <ul class="checklist">
+          <li>10-28 起每集画面边缘能看见纸纹，<a href="/#picks">《雨天窗边》</a>是第一个样本。</li>
+          <li>11-04 起台词数降到 0—1 句，字幕条消失。</li>
+          <li>原帖平均播放从 18.6 万降到 12.4 万，完播率从约 31% 升到约 47%。</li>
+          <li>X 账号更新时间仍为周二、周五，没有中断记录。</li>
+          <li>若 11 月下旬回归长对白，本条判断作废。</li>
+        </ul>
+        <p>如果把这一轮变化放到更长的尺度看，早期 9 月 30 日《关东煮》只有 38 秒，靠表情完成笑点；现在 41 秒的《售货机卡罐》靠罐子滚动的音效完成。时间没变，承担的叙事工具换了。这个迁移是否会稳定下来，要看 11 月剩下的集数。</p>
+      </section>
+
+      <!-- 6 体验指南 -->
+      <section class="block panel" id="guide" aria-labelledby="h-guide">
+        <div class="sec-head">
+          <h2 id="h-guide">体验指南：怎么在免费渠道找到能看的集数</h2>
+          <span class="hint">四步排查</span>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>先看 X 原帖是否可直接播放</h3>
+            <p>@xiaoxiao_hui 的帖子默认公开，未登录状态下部分视频会降为静音预览，登录后恢复原声。原帖是唯一能确认“首发时间”的入口。</p>
+          </li>
+          <li>
+            <h3>需要中文字幕时，切到 B 站搬运号</h3>
+            <p>“绘酱搬运站”按集数建播放列表，简中与繁中各一套。字幕轴比原帖慢约 1—2 秒，前 5 秒最容易察觉。</p>
+          </li>
+          <li>
+            <h3>遇到画质糊的版本先退一步</h3>
+            <p>GIF 转码版分辨率普遍在 240p—360p，草稿线条会糊成一片。判断方法看角色头发：糊版看不出铅笔排线。</p>
+          </li>
+          <li>
+            <h3>找不到的集数去置顶帖查</h3>
+            <p>创作者把每季目录放在 X 置顶帖中，按发布时间排序。缺集多是搬运号漏更，并非原帖删除。</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 7 FAQ -->
+      <section class="block" id="faq" aria-labelledby="h-faq">
+        <div class="sec-head">
+          <h2 id="h-faq">常见问题</h2>
+          <span class="hint">7 个高频疑问</span>
+        </div>
+        <div class="panel" style="padding:16px 18px">
+          <details class="faq" open>
+            <summary>小小绘在 X 上能免费看到全部集数吗？</summary>
+            <div class="ans">可见范围取决于账号状态。@xiaoxiao_hui 的 46 条视频目前均为公开帖，未登录可看到预览，登录后可完整播放。少数早期帖被作者转为“仅关注者可见”，这类不会出现在公开时间线上，只能通过目录帖的旧链接进入。</div>
+          </details>
+          <details class="faq">
+            <summary>国语字幕版和原片有什么差别？</summary>
+            <div class="ans">原片由创作者配中文原声，未加字幕条。B 站“绘酱搬运站”的字幕版是在原片上加简体或繁中字幕，画面不变，但字幕轴比原声慢 1—2 秒，且部分音效被压平。想看表情细节选原帖，想对照台词选字幕版。</div>
+          </details>
+          <details class="faq">
+            <summary>《末班车》的吉他曲是原创吗？</summary>
+            <div class="ans">创作者在 10 月 24 日的 X 回复中称是自己弹奏并录屏，B 站评论区有说法指向免费素材库曲目。可核对的事实是该集音轨节拍比素材库同曲慢，与手弹一致；尚无第三方音频比对结论。这一条属于待确认，不宜当作定论。</div>
+          </details>
+          <details class="faq">
+            <summary>为什么《便利店夜班》第 3 话播放量低于《换乘通道》？</summary>
+            <div class="ans">《换乘通道》82.3 万播放里相当部分来自被截成 GIF 后的二次传播，单帖转发量过万；第 3 话是零台词、水彩扫描风，传播面窄，但完播率更高。两者数据口径不同，不能直接比高低。</div>
+          </details>
+          <details class="faq">
+            <summary>小小绘有没有官方周边或完整合集？</summary>
+            <div class="ans">截至 2026-11-08，没有官方周边售卖，也没有官方完整合集视频。创作者只在 X 置顶帖里提供设定图下载，包含三张角色草稿。网上标“官方合集”的多为搬运号拼接，音轨可能被替换。</div>
+          </details>
+          <details class="faq">
+            <summary>二创改配音的视频能不能看？</summary>
+            <div class="ans">可以看，但要分清。B 站上有 17 个改配稿件，多数改变了原台词意思，属于二创。判断方法：原片无字幕条，二创必然有自制字幕；原片时长 30—90 秒，二创常在 2 分钟以上。</div>
+          </details>
+          <details class="faq">
+            <summary>手机端看原帖一直被压缩成低清怎么办？</summary>
+            <div class="ans">X 移动网页版会按网速降码率。在视频右下角点齿轮选 720p，或改用 App 打开同一条帖。水彩扫描的那几集在低码率下纸纹会消失，观感差异最明显。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 8 用户评论 -->
+      <section class="block" id="reviews" aria-labelledby="h-reviews">
+        <div class="sec-head">
+          <h2 id="h-reviews">观众评论：从第 44 集往回看</h2>
+          <span class="hint">含中性意见</span>
+        </div>
+        <div class="comment-list">
+          <article class="comment">
+            <header><span class="avatar">阿</span><span class="who">阿枢_409</span><span class="when">11-07 22:18</span></header>
+            <p>《便利店夜班》第 3 话硬币滚到货架下那段，镜头没切，一直跟着硬币走，40 秒里只有收银机的滴滴声。这种处理比前两集好太多。</p>
+          </article>
+          <article class="comment neutral">
+            <header><span class="avatar">T</span><span class="who">Tsubasa_7</span><span class="when">11-06 09:41</span></header>
+            <p>《售货机卡罐》没有台词，我一开始以为加载错了。音效是手机实录，能听出环境底噪，这个细节挺真实。就是 41 秒有点不过瘾。</p>
+          </article>
+          <article class="comment">
+            <header><span class="avatar">木</span><span class="who">木木不想加班</span><span class="when">11-05 01:02</span></header>
+            <p>说实话《末班车》我看了三遍还是没懂结尾那个倒影是谁。1 分 47 秒塞的信息太多，配乐又压着人声，字幕版也救不了。</p>
+          </article>
+          <article class="comment">
+            <header><span class="avatar">K</span><span class="who">Kite_2035</span><span class="when">11-03 20:30</span></header>
+            <p>从《雨天窗边》开始的水彩质感确实不一样，暂停看能看见纸的纤维。但背景数码平涂和前景水彩放一起，有一点割裂，尤其《雨天窗边》第 30 秒的窗框。</p>
+          </article>
+          <article class="comment neutral">
+            <header><span class="avatar">南</span><span class="who">南风知我意</span><span class="when">11-02 12:09</span></header>
+            <p>搬运站的字幕轴真的慢，看《换乘通道》的时候画面已经跑过去了字幕才出来。原帖又没字幕，日语看不懂。两难。</p>
+          </article>
+          <article class="comment">
+            <header><span class="avatar">H</span><span class="who">hollow_pencil</span><span class="when">10-30 18:55</span></header>
+            <p>《关东煮》第 1 话的脸线比现在粗一倍，圆脸还没定型，下巴是尖的。从第 12 集开始才稳定成现在这个比例。早期集数反而有种草稿味。</p>
+          </article>
+          <article class="comment">
+            <header><span class="avatar">路</span><span class="who">路过看一集</span><span class="when">10-27 23:14</span></header>
+            <p>不太喜欢这轮全改成无对白，41 秒看完什么都没留下。《售货机卡罐》的罐子滚得再真实，也不如《换乘通道》里那句“等一下”有意思。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 9 相关资讯 -->
+      <section class="block panel" id="news" aria-labelledby="h-news">
+        <div class="sec-head">
+          <h2 id="h-news">相关资讯</h2>
+          <span class="hint">与播放源、授权相关</span>
+        </div>
+        <ul class="tight-list">
+          <li><time datetime="2026-11-06">11-06</time><a class="li-title" href="/#updates">X 原帖评论区置顶更新：第 45 集预告为“自动门”题材</a><span class="badge">预告</span></li>
+          <li><time datetime="2026-11-02">11-02</time><a class="li-title" href="/#faq">YouTube 镜像频道删除两集，公开原因未说明</a><span class="badge">待确认</span></li>
+          <li><time datetime="2026-10-29">10-29</time><a class="li-title" href="/#deep">创作方法分享：彩稿先手绘再扫描，单集平均画 26 张</a><span class="badge">创作</span></li>
+          <li><time datetime="2026-10-25">10-25</time><a class="li-title" href="/#reviews">B 站二创区出现“小小绘配音大赛”标签，稿件 17 个</a><span class="badge">二创</span></li>
+          <li><time datetime="2026-10-20">10-20</time><a class="li-title" href="/#timeline">系列满一周年，创作者发长帖回顾 40 集制作节奏</a><span class="badge">周年</span></li>
+        </ul>
+      </section>
+
+      <!-- 10 相关推荐 -->
+      <section class="block" id="related" aria-labelledby="h-related">
+        <div class="sec-head">
+          <h2 id="h-related">相关推荐：同类型短篇与画风参考</h2>
+          <span class="hint">标签可直接点</span>
+        </div>
+        <div class="panel">
+          <div class="tag-cloud">
+            <a href="/#picks">短篇手绘动画推荐</a>
+            <a href="/#picks">便利店场景短动画</a>
+            <a href="/#deep">水彩扫描动画画风</a>
+            <a href="/#deep">零台词动画短片</a>
+            <a href="/#guide">X 平台视频保存方法</a>
+            <a href="/#faq">繁中字幕版对照</a>
+            <a href="/#reviews">B 站改配音二创</a>
+            <a href="/#timeline">小小绘一年更新节奏</a>
+            <a href="/#faq">手机端提高清晰度</a>
+            <a href="/#categories">地铁与换乘题材</a>
+            <a href="/#deep">铅笔草稿风分镜</a>
+            <a href="/#updates">最新一集在哪看</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11 补充：时间线与可信度分层 -->
+      <section class="block" id="timeline" aria-labelledby="h-timeline">
+        <div class="sec-head">
+          <h2 id="h-timeline">更新节奏时间线与信息可信度分层</h2>
+          <span class="hint">两侧对照看</span>
+        </div>
+        <div class="panel">
+          <ol class="timeline">
+            <li><time datetime="2026-09-30">09-30</time><h3>《关东煮》第 1 话</h3><p>角色定型前的版本，38 秒。</p></li>
+            <li><time datetime="2026-10-14">10-14</time><h3>《末班车》</h3><p>系列最长一集，配乐争议起点。</p></li>
+            <li><time datetime="2026-10-21">10-21</time><h3>《换乘通道》</h3><p>播放峰值 82.3 万，GIF 传播爆发。</p></li>
+            <li><time datetime="2026-10-28">10-28</time><h3>《雨天窗边》</h3><p>画风转水彩扫描，纸纹可见。</p></li>
+            <li><time datetime="2026-11-04">11-04</time><h3>《售货机卡罐》</h3><p>台词归零，音效实录。</p></li>
+            <li><time datetime="2026-11-07">11-07</time><h3>《便利店夜班》第 3 话</h3><p>国语字幕版同步上线。</p></li>
+          </ol>
+        </div>
+        <div class="panel">
+          <h2 style="font-size:16px;margin-bottom:10px;color:var(--brand)">信息可信度分层</h2>
+          <div class="tier">
+            <div class="tier-row">
+              <span class="lv">A 级</span>
+              <div><h3>原帖与录屏可核对</h3><p>发布时间、播放量、创作者本人回复、画面纸纹，均可在 X 原帖逐条核对。</p></div>
+            </div>
+            <div class="tier-row b">
+              <span class="lv">B 级</span>
+              <div><h3>搬运号与字幕信息</h3><p>字幕轴差异、集数编号，来自 B 站播放列表，随搬运更新可能变化。</p></div>
+            </div>
+            <div class="tier-row c">
+              <span class="lv">C 级</span>
+              <div><h3>配乐来源与下架原因</h3><p>吉他曲归属、YouTube 两集下架原因，属转述或未公开信息，不当作结论。</p></div>
+            </div>
+          </div>
+          <p class="side-note">A 级可引用，B 级需注明来源与查看时间，C 级只作为脉络提示。</p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 侧栏：移动端置于正文之后 -->
+    <aside aria-label="侧栏导航与数据">
+      <div class="aside-card">
+        <h2>本页导航</h2>
+        <nav aria-label="侧栏栏目导航">
+          <ul class="side-nav" id="sideNav">
+            <li><a href="/#overview">领域概览</a></li>
+            <li><a href="/#picks">精选内容推荐</a></li>
+            <li><a href="/#updates">最新更新</a></li>
+            <li><a href="/#categories">分类入口</a></li>
+            <li><a href="/#deep">深度解析</a></li>
+            <li><a href="/#guide">体验指南</a></li>
+            <li><a href="/#faq">常见问题</a></li>
+            <li><a href="/#reviews">观众评论</a></li>
+            <li><a href="/#news">相关资讯</a></li>
+            <li><a href="/#related">相关推荐</a></li>
+            <li><a href="/#timeline">时间线与可信度</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="aside-card">
+        <h2>系列数据（示例统计）</h2>
+        <ul class="side-list">
+          <li><span>已发布短篇</span><b>46</b></li>
+          <li><span>平均时长</span><b>58 秒</b></li>
+          <li><span>最高播放一集</span><b>82.3 万</b></li>
+          <li><span>字幕版覆盖</span><b>21 集</b></li>
+          <li><span>二创改配音稿件</span><b>17</b></li>
+          <li><span>统计截止</span><b>11-07</b></li>
+        </ul>
+        <p class="side-note">播放量取自 X 原帖页面公开数值，四舍五入到千位。</p>
+      </div>
+
+      <div class="aside-card">
+        <h2>常用标签</h2>
+        <div class="tag-cloud sm">
+          <a href="/#picks">便利店夜班</a>
+          <a href="/#picks">换乘通道</a>
+          <a href="/#deep">水彩扫描</a>
+          <a href="/#faq">国语字幕</a>
+          <a href="/#guide">零台词</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-foot" id="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/#top" aria-label="回到首页">
+          <svg viewBox="0 0 64 64" role="img" aria-label="品牌标志">
+            <rect x="2" y="2" width="60" height="60" rx="14" fill="#243459"/>
+            <rect x="13" y="16" width="38" height="26" rx="4" fill="none" stroke="#f5b942" stroke-width="2.6"/>
+            <path d="M19 35c5-2 7-8 6-13 4 1 7 4 8 9 3-2 4-6 4-9 4 3 5 8 3 13-2 6-7 9-13 8-4-.6-7-3.4-8-8z" fill="#f5b942"/>
+            <rect x="26" y="46" width="12" height="3" rx="1.5" fill="#8fa3c9"/>
+          </svg>
+          <span class="brand-text">推特小小绘在线免费观看</span>
+        </a>
+        <p class="foot-desc">按集数整理 X 原帖与授权字幕版的公开播放路径，标注画面、音轨与台词变化，帮观众在免费可见的范围内找到想看的那一集。</p>
+      </div>
+      <div class="foot-col">
+        <h3>内容频道</h3>
+        <ul>
+          <li><a href="/#picks">精选内容推荐</a></li>
+          <li><a href="/#updates">最新更新日志</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#reviews">观众评论</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>使用帮助</h3>
+        <ul>
+          <li><a href="/#guide">免费观看指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#categories">分类入口</a></li>
+          <li><a href="/#timeline">可信度分层</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>相关入口</h3>
+        <ul>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#related">相关推荐标签</a></li>
+          <li><a href="/#overview">系列概览</a></li>
+          <li><a href="/#top">回到顶部</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>页面内容含示例条目与示例统计数据，播放量、集数等以原帖页面为准；更新时间 2026-11-08，对应正文“最新更新”与“相关资讯”两条可核对项。</span>
+      <span>© 2026 推特小小绘在线免费观看 · 内容整理</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="回到顶部">↑</button>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"推特小小绘在线免费观看",
+  "description":"整理小小绘短篇动画在 X 原帖与授权字幕版的公开播放路径、画风变化与常见问题。",
+  "inLanguage":"zh-CN",
+  "about":{"@type":"CreativeWork","name":"小小绘短篇动画"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"小小绘在 X 上能免费看到全部集数吗？","acceptedAnswer":{"@type":"Answer","text":"@xiaoxiao_hui 的 46 条视频目前均为公开帖，未登录可看到预览，登录后可完整播放。少数早期帖被作者转为仅关注者可见，只能通过目录帖旧链接进入。"}},
+    {"@type":"Question","name":"国语字幕版和原片有什么差别？","acceptedAnswer":{"@type":"Answer","text":"原片由创作者配中文原声，未加字幕条。B 站字幕版在画面上叠加简中或繁中字幕，字幕轴比原声慢 1—2 秒，部分音效被压平。"}},
+    {"@type":"Question","name":"《末班车》的吉他曲是原创吗？","acceptedAnswer":{"@type":"Answer","text":"创作者在 10 月 24 日的 X 回复中称自己弹奏并录屏；B 站评论区有说法指向免费素材库。可核对事实是该集音轨节拍更慢，与手弹一致，尚无第三方比对结论。"}},
+    {"@type":"Question","name":"为什么《便利店夜班》第 3 话播放量低于《换乘通道》？","acceptedAnswer":{"@type":"Answer","text":"《换乘通道》播放中相当部分来自被截成 GIF 后的二次传播；第 3 话是零台词、水彩扫描风，传播面窄，但完播率更高。两者口径不同。"}},
+    {"@type":"Question","name":"小小绘有没有官方周边或完整合集？","acceptedAnswer":{"@type":"Answer","text":"截至 2026-11-08 没有官方周边，也没有官方完整合集视频。置顶帖提供三张设定图下载。标“官方合集”的多为搬运号拼接。"}},
+    {"@type":"Question","name":"二创改配音的视频能不能看？","acceptedAnswer":{"@type":"Answer","text":"可以看，属于二创。判断方法：原片无字幕条，二创有自制字幕；原片 30—90 秒，二创常在 2 分钟以上。"}},
+    {"@type":"Question","name":"手机端看原帖一直被压缩成低清怎么办？","acceptedAnswer":{"@type":"Answer","text":"X 移动网页版会按网速降码率。在视频右下角点齿轮选 720p，或改用 App 打开同一条帖。水彩扫描的集数在低码率下纸纹会消失。"}}
+  ]
+}
+</script>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端菜单 */
+  var menuBtn = document.getElementById('menuBtn');
+  var navMain = document.getElementById('navMain');
+  function closeMenu(){
+    if(navMain.classList.contains('open')){
+      navMain.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
+    }
+  }
+  menuBtn.addEventListener('click', function(){
+    var open = navMain.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  navMain.addEventListener('click', function(e){
+    if(e.target.tagName === 'A') closeMenu();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeMenu();
+  });
+  document.addEventListener('click', function(e){
+    if(!navMain.contains(e.target) && !menuBtn.contains(e.target)) closeMenu();
+  });
+
+  /* 页内平滑滚动，为吸顶预留偏移 */
+  var stickyOffset = 0;
+  function computeOffset(){
+    var dec = document.querySelector('.declare');
+    var head = document.querySelector('.site-head');
+    stickyOffset = (dec ? dec.offsetHeight : 0) + (head ? head.offsetHeight : 0) + 14;
+  }
+  computeOffset();
+  window.addEventListener('resize', computeOffset);
+
+  document.querySelectorAll('a[href^="/#"]').forEach(function(link){
+    link.addEventListener('click', function(e){
+      var id = link.getAttribute('href').slice(2);
+      if(!id) return;
+      var target = document.getElementById(id);
+      if(!target) return;
+      e.preventDefault();
+      var y = target.getBoundingClientRect().top + window.pageYOffset - stickyOffset;
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({top: y, behavior: reduce ? 'auto' : 'smooth'});
+      if(history.replaceState) history.replaceState(null, '', '/' + '#' + id);
+      target.setAttribute('tabindex','-1');
+      target.focus({preventScroll:true});
+    });
+  });
+
+  /* 回到顶部 */
+  var toTop = document.getElementById('toTop');
+  function onScroll(){
+    if(window.pageYOffset > 520) toTop.classList.add('show');
+    else toTop.classList.remove('show');
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  toTop.addEventListener('click', function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'});
+  });
+
+  /* 侧栏滚动高亮 */
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections = sideLinks.map(function(a){
+    return document.getElementById(a.getAttribute('href').slice(2));
+  }).filter(Boolean);
+  if('IntersectionObserver' in window && sections.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          var id = en.target.id;
+          sideLinks.forEach(function(a){
+            a.classList.toggle('active', a.getAttribute('href') === '/#' + id);
+          });
+        }
+      });
+    }, {rootMargin: '-45% 0px -50% 0px', threshold: 0});
+    sections.forEach(function(s){ io.observe(s); });
+  }
+
+  /* 本地查找 */
+  var input = document.getElementById('siteSearch');
+  var btn = document.getElementById('searchBtn');
+  var fb = document.getElementById('searchFeedback');
+  var index = [].map.call(document.querySelectorAll('main h1, main h2, main h3, main p, main li, main summary'), function(el){
+    return {
+      text: (el.textContent || '').replace(/\s+/g,' ').trim(),
+      el: el
+    };
+  }).filter(function(item){ return item.text.length > 4; });
+
+  function clearMark(){
+    document.querySelectorAll('.search-hit').forEach(function(el){
+      el.classList.remove('search-hit');
+      el.style.outline = '';
+      el.style.background = '';
+    });
+  }
+  function runSearch(){
+    var q = (input.value || '').trim();
+    if(!q){ fb.textContent = ''; clearMark(); return; }
+    var hit = null;
+    for(var i=0;i<index.length;i++){
+      if(index[i].text.indexOf(q) !== -1){ hit = index[i]; break; }
+    }
+    clearMark();
+    if(!hit){
+      fb.textContent = '没有找到「' + q + '」相关内容';
+      return;
+    }
+    fb.textContent = '';
+    hit.el.style.background = '#fff4d8';
+    hit.el.style.outline = '2px solid #e8912a';
+    hit.el.classList.add('search-hit');
+    var y = hit.el.getBoundingClientRect().top + window.pageYOffset - stickyOffset - 30;
+    window.scrollTo({top: y, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+  }
+  btn.addEventListener('click', runSearch);
+  input.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); runSearch(); }
+  });
+  input.addEventListener('input', function(){
+    if(!input.value.trim()){ fb.textContent = ''; clearMark(); }
+  });
+})();
+</script>
+</body>
+              </html>
