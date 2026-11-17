@@ -1,0 +1,1073 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>笔盒在线发布入口-作品发布与分类查询</title>
+<meta name="description" content="笔盒在线发布入口整理发布流程、审核规则与分类查询方式，涵盖独立漫画、同人志、插画集等发布通道，附投稿时间、规格要求与常见问题，帮助创作者在2026年11月找到合适的发布路径。">
+<meta name="keywords" content="笔盒在线发布入口">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f4a3f'/%3E%3Crect x='14' y='22' width='36' height='24' rx='5' fill='none' stroke='%23f2c14e' stroke-width='4'/%3E%3Ccircle cx='32' cy='34' r='5' fill='%23f2c14e'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"笔盒在线发布入口","inLanguage":"zh-CN","description":"笔盒在线发布入口的发布流程、审核规则与分类查询说明。"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"笔盒在线发布入口支持哪些作品类型？","acceptedAnswer":{"@type":"Answer","text":"目前开放独立漫画、同人志、插画集、设定集、短篇图文五类。设定集需附作品来源与授权说明，同人志需注明原作名称。"}},
+{"@type":"Question","name":"发布一篇作品要经过几道审核？","acceptedAnswer":{"@type":"Answer","text":"两道：系统查重与规格检测在提交后30分钟内完成，人工复核由编辑在1至3个工作日内处理，涉及授权材料的稿件排期以短信通知为准。"}},
+{"@type":"Question","name":"封面图尺寸有什么要求？","acceptedAnswer":{"@type":"Answer","text":"竖版封面推荐1200×1600像素，横版800×450像素，单张不超过5MB，格式为JPG或PNG，禁止带第三方平台水印。"}},
+{"@type":"Question","name":"被退回的稿件还能重新提交吗？","acceptedAnswer":{"@type":"Answer","text":"可以。退回时会附具体条目编号与原因，修改后在同一入口重新上传，同一稿件30天内退回复审不超过两次。"}}
+]}
+</script>
+<style>
+:root{
+  --ink:#1f2a26;
+  --ink-soft:#44514b;
+  --paper:#f6f4ee;
+  --paper-2:#ffffff;
+  --line:#d9d4c7;
+  --brand:#2f4a3f;
+  --brand-2:#3f6354;
+  --accent:#c8811f;
+  --accent-soft:#f7e7c8;
+  --rose:#b4534b;
+  --radius:10px;
+  --radius-lg:16px;
+  --shadow:0 2px 10px rgba(31,42,38,.08);
+  --shadow-lg:0 10px 28px rgba(31,42,38,.13);
+  --space-1:6px;--space-2:12px;--space-3:18px;--space-4:26px;--space-5:38px;--space-6:56px;
+  --fs-xs:12.5px;--fs-s:14px;--fs-m:15.5px;--fs-l:18px;--fs-xl:23px;--fs-2xl:30px;--fs-3xl:40px;
+  --sticky-top:78px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:132px}
+body{
+  font-family:var(--font);
+  background:var(--paper);
+  color:var(--ink);
+  font-size:var(--fs-m);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{color:var(--accent)}
+img{max-width:100%;display:block}
+ul,ol{list-style:none}
+h1,h2,h3,h4{line-height:1.35;font-weight:700}
+.skip{position:absolute;left:-9999px;top:0;background:var(--brand);color:#fff;padding:10px 18px;z-index:200;border-radius:0 0 8px 0}
+.skip:focus{left:0}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+
+/* 吸顶组合 */
+.sticky-wrap{position:sticky;top:0;z-index:100}
+.notice{
+  background:var(--brand);
+  color:#f3efe4;
+  font-size:var(--fs-xs);
+  padding:8px 16px;
+  display:flex;gap:14px;justify-content:center;flex-wrap:wrap;
+  align-items:center;
+  letter-spacing:.2px;
+}
+.notice b{color:#f2c14e;font-weight:600}
+.notice .dot{width:5px;height:5px;border-radius:50%;background:#f2c14e;display:inline-block;margin-right:6px;vertical-align:1px}
+.notice a{color:#f2c14e;text-decoration:underline;text-underline-offset:3px}
+
+header.site{
+  background:rgba(246,244,238,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+.head-in{
+  max-width:1180px;margin:0 auto;padding:10px 20px;
+  display:flex;align-items:center;gap:22px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.brand svg{width:38px;height:38px;flex-shrink:0}
+.brand-name{font-size:var(--fs-l);font-weight:800;color:var(--brand);letter-spacing:.5px;white-space:nowrap}
+nav.top{flex:1;min-width:0}
+nav.top ul{display:flex;gap:4px;flex-wrap:wrap}
+nav.top a{
+  display:block;padding:7px 11px;border-radius:8px;
+  font-size:var(--fs-s);color:var(--ink-soft);font-weight:500;white-space:nowrap;
+  transition:background .18s,color .18s;
+}
+nav.top a:hover,nav.top a.active{background:var(--accent-soft);color:var(--brand);text-decoration:none}
+.head-tools{display:flex;align-items:center;gap:10px}
+.search{position:relative;display:flex;align-items:center}
+.search input{
+  width:172px;padding:7px 10px 7px 32px;border:1px solid var(--line);
+  border-radius:20px;background:var(--paper-2);font-size:var(--fs-s);font-family:var(--font);color:var(--ink);
+}
+.search input:focus{outline:none;border-color:var(--brand-2);box-shadow:0 0 0 3px rgba(63,99,84,.16)}
+.search svg{position:absolute;left:10px;width:15px;height:15px;color:var(--ink-soft);pointer-events:none}
+.search-out{
+  position:absolute;top:110%;left:0;width:260px;background:var(--paper-2);
+  border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-lg);
+  padding:6px;display:none;z-index:120;
+}
+.search-out.show{display:block}
+.search-out a,.search-out p{display:block;padding:8px 10px;font-size:var(--fs-s);border-radius:6px;color:var(--ink)}
+.search-out a:hover{background:var(--accent-soft);text-decoration:none}
+.search-out .empty{color:var(--ink-soft);font-size:var(--fs-xs)}
+.btn{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:8px 16px;border-radius:22px;border:1px solid transparent;
+  font-size:var(--fs-s);font-weight:600;cursor:pointer;font-family:var(--font);
+  transition:transform .16s,box-shadow .16s,background .16s;
+  white-space:nowrap;
+}
+.btn:hover{transform:translateY(-2px);text-decoration:none}
+.btn-solid{background:var(--brand);color:#fff}
+.btn-solid:hover{background:var(--brand-2);color:#fff;box-shadow:var(--shadow-lg)}
+.btn-ghost{background:transparent;border-color:var(--brand);color:var(--brand)}
+.btn-ghost:hover{background:var(--accent-soft);color:var(--brand)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:6px 10px;cursor:pointer;color:var(--brand)}
+.menu-btn svg{width:20px;height:20px;display:block}
+
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 82% 18%,rgba(200,129,31,.16),transparent 46%),
+    radial-gradient(circle at 12% 88%,rgba(63,99,84,.14),transparent 50%),
+    linear-gradient(160deg,#f9f6ee 0%,#eee9da 100%);
+  border-bottom:1px solid var(--line);
+}
+.hero-in{
+  max-width:1180px;margin:0 auto;padding:46px 20px 50px;
+  display:grid;grid-template-columns:1.05fr .95fr;gap:38px;align-items:center;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--paper-2);border:1px solid var(--line);
+  padding:5px 13px;border-radius:20px;font-size:var(--fs-xs);
+  color:var(--brand-2);font-weight:600;letter-spacing:.4px;
+}
+.hero-tag .pulse{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(200,129,31,.5);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(200,129,31,.45)}70%{box-shadow:0 0 0 9px rgba(200,129,31,0)}100%{box-shadow:0 0 0 0 rgba(200,129,31,0)}}
+.hero h1{
+  font-size:var(--fs-3xl);
+  color:var(--brand);
+  margin:16px 0 12px;
+  letter-spacing:1px;
+  line-height:1.25;
+}
+.hero-lead{font-size:var(--fs-m);color:var(--ink-soft);max-width:520px;margin-bottom:22px}
+.hero-lead strong{color:var(--brand);font-weight:700}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px dashed var(--line);padding-top:18px}
+.hero-stats div{font-size:var(--fs-xs);color:var(--ink-soft)}
+.hero-stats b{display:block;font-size:var(--fs-xl);color:var(--brand);line-height:1.2;font-weight:800}
+.hero-art{position:relative;min-height:330px}
+.hero-art svg{width:100%;height:auto}
+
+/* 主体布局 */
+.layout{
+  max-width:1180px;margin:0 auto;padding:44px 20px 10px;
+  display:grid;grid-template-columns:minmax(0,1fr) 292px;gap:36px;align-items:start;
+}
+main{min-width:0}
+section.block{margin-bottom:46px;scroll-margin-top:132px}
+.block-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:18px;flex-wrap:wrap}
+.block-head h2{
+  font-size:var(--fs-2xl);color:var(--brand);position:relative;padding-left:16px;
+}
+.block-head h2::before{
+  content:"";position:absolute;left:0;top:6px;bottom:6px;width:5px;border-radius:3px;
+  background:linear-gradient(180deg,var(--accent),var(--brand-2));
+}
+.block-head .sub{font-size:var(--fs-xs);color:var(--ink-soft)}
+.more-link{font-size:var(--fs-s);font-weight:600;color:var(--brand-2)}
+.more-link::after{content:" →"}
+
+/* 概览卡 */
+.overview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ov-card{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 16px 14px;box-shadow:var(--shadow);
+}
+.ov-card .num{font-size:var(--fs-xs);color:var(--accent);font-weight:700;letter-spacing:1px}
+.ov-card h3{font-size:var(--fs-m);margin:6px 0 6px;color:var(--ink)}
+.ov-card p{font-size:var(--fs-xs);color:var(--ink-soft);line-height:1.65}
+.ov-card.wide{grid-column:span 3;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.ov-card.wide p{font-size:var(--fs-s);flex:1;min-width:200px}
+
+/* 精选推荐 */
+.pick-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:18px}
+.pick-main{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius-lg);
+  overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;
+}
+.pick-main img{width:100%;height:200px;object-fit:cover}
+.pick-main .body{padding:16px 18px 18px}
+.pick-main h3{font-size:var(--fs-l);color:var(--brand);margin-bottom:8px}
+.pick-main p{font-size:var(--fs-s);color:var(--ink-soft)}
+.pick-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;font-size:var(--fs-xs);color:var(--ink-soft)}
+.pick-meta span{background:var(--accent-soft);color:#7a5212;padding:2px 9px;border-radius:12px;font-weight:600}
+.pick-side{display:flex;flex-direction:column;gap:12px}
+.pick-item{
+  display:flex;gap:12px;background:var(--paper-2);border:1px solid var(--line);
+  border-radius:var(--radius);padding:12px;box-shadow:var(--shadow);
+  transition:transform .16s,border-color .16s;
+}
+.pick-item:hover{transform:translateY(-2px);border-color:var(--brand-2)}
+.pick-item .idx{
+  flex-shrink:0;width:26px;height:26px;border-radius:8px;background:var(--brand);color:#fff;
+  font-size:var(--fs-xs);font-weight:700;display:grid;place-items:center;
+}
+.pick-item h4{font-size:var(--fs-s);color:var(--ink);margin-bottom:3px}
+.pick-item p{font-size:var(--fs-xs);color:var(--ink-soft)}
+
+/* 紧凑列表 - 最新更新 */
+.updates{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius-lg);
+  overflow:hidden;box-shadow:var(--shadow);
+}
+.updates li{
+  display:flex;gap:14px;padding:13px 18px;border-bottom:1px solid #ece8dd;align-items:baseline;
+  transition:background .16s;
+}
+.updates li:last-child{border-bottom:none}
+.updates li:hover{background:#fdfbf5}
+.updates time{font-size:var(--fs-xs);color:var(--accent);font-weight:700;flex-shrink:0;font-variant-numeric:tabular-nums}
+.updates .txt{font-size:var(--fs-s);color:var(--ink)}
+.updates .txt small{color:var(--ink-soft);font-size:var(--fs-xs);margin-left:6px}
+.updates .badge{font-size:11px;background:var(--brand);color:#fff;padding:1px 7px;border-radius:9px;margin-left:auto;flex-shrink:0}
+
+/* 分类索引 */
+.cat-index{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.cat-index a{
+  display:block;background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:13px 14px;transition:transform .16s,border-color .16s,background .16s;
+}
+.cat-index a:hover{transform:translateY(-3px);border-color:var(--accent);background:#fdf8ee;text-decoration:none}
+.cat-index b{display:block;font-size:var(--fs-s);color:var(--brand);margin-bottom:3px}
+.cat-index span{font-size:var(--fs-xs);color:var(--ink-soft)}
+
+/* 深度解析 */
+.deep{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius-lg);
+  padding:26px 28px;box-shadow:var(--shadow);
+}
+.deep .kicker{font-size:var(--fs-xs);color:var(--accent);font-weight:700;letter-spacing:2px;margin-bottom:6px}
+.deep > p{font-size:var(--fs-m);color:var(--ink-soft);margin-bottom:16px}
+.deep h3{font-size:var(--fs-l);color:var(--brand);margin:22px 0 9px;padding-top:4px}
+.deep h3:first-of-type{margin-top:6px}
+.deep p{font-size:var(--fs-s);color:var(--ink-soft);margin-bottom:10px}
+.deep ul{margin:8px 0 12px;padding-left:2px}
+.deep ul li{
+  position:relative;padding-left:18px;font-size:var(--fs-s);color:var(--ink-soft);margin-bottom:7px;
+}
+.deep ul li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:2px;background:var(--accent)}
+.deep blockquote{
+  border-left:4px solid var(--accent);background:#fdf8ee;padding:12px 16px;border-radius:0 8px 8px 0;
+  font-size:var(--fs-s);color:var(--ink);margin:14px 0;
+}
+.deep blockquote b{color:var(--brand)}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.compare div{border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;background:#fbfaf5}
+.compare h4{font-size:var(--fs-s);color:var(--brand);margin-bottom:6px}
+.compare span{font-size:var(--fs-xs);color:var(--ink-soft);display:block}
+
+/* 体验指南 步骤 */
+.steps{counter-reset:step;display:grid;gap:10px}
+.steps li{
+  counter-increment:step;position:relative;
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 16px 14px 58px;box-shadow:var(--shadow);
+}
+.steps li::before{
+  content:counter(step,decimal-leading-zero);
+  position:absolute;left:14px;top:13px;width:30px;height:30px;border-radius:9px;
+  background:linear-gradient(150deg,var(--brand),var(--brand-2));color:#f2c14e;
+  font-size:var(--fs-s);font-weight:800;display:grid;place-items:center;
+}
+.steps b{display:block;font-size:var(--fs-s);color:var(--ink);margin-bottom:2px}
+.steps span{font-size:var(--fs-xs);color:var(--ink-soft)}
+
+/* FAQ */
+.faq details{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+  margin-bottom:9px;overflow:hidden;
+}
+.faq summary{
+  cursor:pointer;list-style:none;padding:13px 44px 13px 16px;font-size:var(--fs-s);
+  font-weight:600;color:var(--ink);position:relative;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);
+  font-size:20px;color:var(--accent);font-weight:400;transition:transform .2s;
+}
+.faq details[open] summary::after{content:"−"}
+.faq details[open] summary{background:#fdf8ee;border-bottom:1px solid var(--line)}
+.faq .ans{padding:12px 16px;font-size:var(--fs-xs);color:var(--ink-soft);line-height:1.8}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cmt{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:13px 15px;font-size:var(--fs-s);color:var(--ink-soft);box-shadow:var(--shadow);
+}
+.cmt .who{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.cmt .ava{
+  width:26px;height:26px;border-radius:50%;background:var(--accent-soft);color:#7a5212;
+  font-size:var(--fs-xs);font-weight:800;display:grid;place-items:center;flex-shrink:0;
+}
+.cmt .who b{font-size:var(--fs-xs);color:var(--ink)}
+.cmt .who time{font-size:11px;color:#9a9484;margin-left:auto}
+.cmt p{font-size:var(--fs-xs);line-height:1.75}
+.cmt p em{font-style:normal;color:var(--brand);font-weight:600}
+.cmt .ref{display:inline-block;margin-top:6px;font-size:11px;background:#f1ece0;color:var(--ink-soft);padding:1px 8px;border-radius:10px}
+
+/* 资讯 */
+.news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.news-item{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);
+  transition:transform .16s,box-shadow .16s;
+}
+.news-item:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.news-item img{width:100%;height:132px;object-fit:cover}
+.news-item .body{padding:12px 14px 14px;display:flex;flex-direction:column;flex:1}
+.news-item h3{font-size:var(--fs-s);color:var(--ink);margin-bottom:5px}
+.news-item p{font-size:var(--fs-xs);color:var(--ink-soft);flex:1}
+.news-item time{font-size:11px;color:var(--accent);font-weight:700;margin-top:8px}
+
+/* 标签推荐 */
+.tags{display:flex;flex-wrap:wrap;gap:9px}
+.tags a{
+  display:inline-block;padding:6px 14px;border-radius:20px;background:var(--paper-2);
+  border:1px solid var(--line);font-size:var(--fs-xs);color:var(--brand-2);font-weight:600;
+  transition:background .16s,color .16s,transform .16s;
+}
+.tags a:hover{background:var(--brand);color:#f2c14e;border-color:var(--brand);transform:translateY(-2px);text-decoration:none}
+
+/* 时间线 */
+.timeline{position:relative;padding-left:22px}
+.timeline::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline li{position:relative;margin-bottom:16px}
+.timeline li::before{
+  content:"";position:absolute;left:-21px;top:6px;width:11px;height:11px;border-radius:50%;
+  background:var(--paper);border:3px solid var(--brand-2);
+}
+.timeline time{font-size:var(--fs-xs);color:var(--accent);font-weight:700}
+.timeline b{display:block;font-size:var(--fs-s);color:var(--ink);margin:1px 0 2px}
+.timeline p{font-size:var(--fs-xs);color:var(--ink-soft)}
+
+/* 侧栏 */
+aside{min-width:0}
+.side-card{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius-lg);
+  padding:18px;margin-bottom:20px;box-shadow:var(--shadow);
+}
+.side-card h3{font-size:var(--fs-m);color:var(--brand);margin-bottom:12px;padding-bottom:9px;border-bottom:1px dashed var(--line);display:flex;align-items:center;gap:7px}
+.side-card h3 svg{width:16px;height:16px;color:var(--accent)}
+.side-nav a{
+  display:block;padding:7px 10px;border-radius:7px;font-size:var(--fs-s);color:var(--ink-soft);
+  border-left:3px solid transparent;transition:background .16s,color .16s,border-color .16s;
+}
+.side-nav a:hover{background:#faf7ef;text-decoration:none}
+.side-nav a.active{background:var(--accent-soft);color:var(--brand);font-weight:700;border-left-color:var(--accent)}
+.rank-list li{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid #eeeade}
+.rank-list li:last-child{border-bottom:none}
+.rank-list .n{width:20px;flex-shrink:0;font-size:var(--fs-xs);font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums}
+.rank-list a{font-size:var(--fs-s);color:var(--ink);font-weight:500}
+.rank-list a:hover{color:var(--accent);text-decoration:none}
+.rank-list small{display:block;font-size:11px;color:var(--ink-soft);font-weight:400}
+.side-note{font-size:var(--fs-xs);color:var(--ink-soft);line-height:1.8}
+.side-note b{color:var(--brand)}
+
+/* 页脚 */
+footer.site{
+  background:var(--brand);color:#d8dfd8;margin-top:30px;font-size:var(--fs-s);
+}
+.foot-in{max-width:1180px;margin:0 auto;padding:40px 20px 22px}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px;margin-bottom:28px}
+.foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.foot-brand svg{width:34px;height:34px}
+.foot-brand b{font-size:var(--fs-l);color:#fff;letter-spacing:.5px}
+.foot-desc{font-size:var(--fs-xs);line-height:1.85;color:#b9c6bd;max-width:300px}
+.foot-col h4{font-size:var(--fs-s);color:#f2c14e;margin-bottom:10px;font-weight:700}
+.foot-col a{display:block;font-size:var(--fs-xs);color:#c4cfc7;padding:3px 0}
+.foot-col a:hover{color:#fff;text-decoration:underline}
+.foot-bottom{
+  border-top:1px solid rgba(255,255,255,.16);padding-top:16px;
+  font-size:11.5px;color:#a8b6ac;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;line-height:1.8;
+}
+.foot-bottom b{color:#d8dfd8;font-weight:600}
+
+/* 回到顶部 */
+#toTop{
+  position:fixed;right:18px;bottom:22px;width:44px;height:44px;border-radius:50%;
+  background:var(--brand);color:#f2c14e;border:none;cursor:pointer;
+  display:grid;place-items:center;box-shadow:var(--shadow-lg);
+  opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .22s,transform .22s,visibility .22s;
+  z-index:90;
+}
+#toTop.show{opacity:1;visibility:visible;transform:translateY(0)}
+#toTop svg{width:20px;height:20px}
+
+/* 响应式 */
+@media (max-width:1000px){
+  .layout{grid-template-columns:1fr;gap:8px}
+  aside{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+  .side-card{margin-bottom:0}
+  .hero-in{grid-template-columns:1fr;gap:24px}
+  .hero-art{min-height:auto;max-width:460px;margin:0 auto;width:100%}
+  .hero h1{font-size:var(--fs-2xl)}
+  .foot-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:820px){
+  .head-in{padding:9px 16px;gap:12px}
+  .menu-btn{display:block;order:3;margin-left:auto}
+  nav.top{display:none;flex-basis:100%;order:5}
+  nav.top.open{display:block}
+  nav.top ul{flex-direction:column;gap:2px;padding:8px 0 4px;border-top:1px solid var(--line);margin-top:6px}
+  nav.top a{padding:10px 12px;border-radius:8px}
+  .head-tools{order:4;margin-left:0}
+  .search input{width:132px}
+  .overview-grid{grid-template-columns:1fr 1fr}
+  .ov-card.wide{grid-column:span 2}
+  .pick-grid{grid-template-columns:1fr}
+  .cat-index{grid-template-columns:repeat(2,1fr)}
+  .comments{grid-template-columns:1fr}
+  .compare{grid-template-columns:1fr}
+  .news-grid{grid-template-columns:1fr 1fr}
+  .deep{padding:20px 18px}
+  .block-head h2{font-size:var(--fs-xl)}
+  .hero h1{font-size:28px}
+  html{scroll-padding-top:150px}
+}
+@media (max-width:560px){
+  .head-in{flex-wrap:wrap}
+  .search input{width:118px}
+  .head-tools .btn{padding:7px 12px;font-size:var(--fs-xs)}
+  .overview-grid{grid-template-columns:1fr}
+  .ov-card.wide{grid-column:span 1}
+  .cat-index{grid-template-columns:1fr 1fr}
+  .news-grid{grid-template-columns:1fr}
+  aside{grid-template-columns:1fr}
+  .hero-in{padding:32px 16px 36px}
+  .hero-stats{gap:18px}
+  .hero h1{font-size:25px}
+  .layout{padding:28px 16px 8px}
+  .updates li{flex-wrap:wrap;gap:6px}
+  .updates .badge{margin-left:0}
+  .foot-top{grid-template-columns:1fr}
+  .foot-bottom{flex-direction:column;gap:6px}
+  #toTop{right:12px;bottom:14px;width:40px;height:40px}
+  .notice{font-size:11.5px;padding:7px 12px;gap:8px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .pick-item:hover,.news-item:hover,.cat-index a:hover,.btn:hover,.tags a:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<div class="sticky-wrap">
+  <div class="notice" role="note">
+    <span><span class="dot" aria-hidden="true"></span><b>11月8日更新</b>：发布入口新增「设定集」通道，审核材料清单同步刷新</span>
+    <span>同人志授权声明模板 v2.3 已上线</span>
+    <a href="#updates">查看今日更新</a>
+  </div>
+  <header class="site">
+    <div class="head-in">
+      <a class="brand" href="/#hero" aria-label="笔盒在线发布入口首页">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect x="6" y="14" width="52" height="36" rx="8" fill="#2f4a3f"/>
+          <rect x="14" y="23" width="36" height="18" rx="4" fill="none" stroke="#f2c14e" stroke-width="3.4"/>
+          <circle cx="32" cy="32" r="5" fill="#f2c14e"/>
+          <path d="M22 14v-3.5M42 14v-3.5" stroke="#c8811f" stroke-width="3.4" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">笔盒在线发布入口</span>
+      </a>
+      <nav class="top" id="topNav" aria-label="主题导航">
+        <ul>
+          <li><a href="#overview" class="active">发布概览</a></li>
+          <li><a href="#picks">精选作品</a></li>
+          <li><a href="#updates">最新更新</a></li>
+          <li><a href="#cats">分类索引</a></li>
+          <li><a href="#deep">深度解析</a></li>
+          <li><a href="#guide">发布指南</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#comments">读者反馈</a></li>
+          <li><a href="#news">行业资讯</a></li>
+          <li><a href="#tags">热门标签</a></li>
+          <li><a href="#timeline">排期时间线</a></li>
+        </ul>
+      </nav>
+      <div class="head-tools">
+        <div class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>
+          <input type="search" id="searchInput" placeholder="搜作品、分类、问题" aria-label="站内搜索" autocomplete="off">
+          <div class="search-out" id="searchOut" role="status" aria-live="polite"></div>
+        </div>
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="topNav" aria-label="展开导航菜单">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <a class="btn btn-solid" href="#guide">去发布</a>
+      </div>
+    </div>
+  </header>
+</div>
+
+<div class="hero" id="hero">
+  <div class="hero-in">
+    <div>
+      <span class="hero-tag"><span class="pulse" aria-hidden="true"></span>今日 11 月 8 日 · 人工复核通道开放</span>
+      <h1>笔盒在线发布入口</h1>
+      <p class="hero-lead">面向独立漫画与插画作者的线上发布通道汇总：<strong>13 个在审分类</strong>、<strong>4 种稿件规格</strong>、<strong>双道审核</strong>流程。提交前先核对授权材料，能省下一轮退回。</p>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="#guide">查看发布四步</a>
+        <a class="btn btn-ghost" href="#updates">今日更新 6 条</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>13</b>在审分类</div>
+        <div><b>4</b>稿件规格档</div>
+        <div><b>1—3</b>工作日人工复核</div>
+        <div><b>2</b>次/30天 复审上限</div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 340" role="presentation">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#3f6354"/><stop offset="1" stop-color="#2f4a3f"/>
+          </linearGradient>
+          <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#f7e7c8"/><stop offset="1" stop-color="#e9d9b4"/>
+          </linearGradient>
+        </defs>
+        <circle cx="322" cy="86" r="62" fill="#f2c14e" opacity=".28"/>
+        <circle cx="86" cy="252" r="46" fill="#3f6354" opacity=".18"/>
+        <g transform="rotate(-8 210 180)">
+          <rect x="96" y="96" width="228" height="152" rx="14" fill="#ffffff" stroke="#d9d4c7" stroke-width="2"/>
+          <rect x="96" y="96" width="228" height="34" rx="14" fill="url(#g1)"/>
+          <rect x="96" y="116" width="228" height="14" fill="url(#g1)"/>
+          <text x="116" y="119" font-family="sans-serif" font-size="13" fill="#f2c14e" font-weight="bold">发布清单 · 2026-11-08</text>
+          <rect x="116" y="148" width="118" height="9" rx="4.5" fill="#e2ddcd"/>
+          <rect x="116" y="168" width="168" height="9" rx="4.5" fill="#e2ddcd"/>
+          <rect x="116" y="188" width="140" height="9" rx="4.5" fill="#e2ddcd"/>
+          <rect x="116" y="210" width="58" height="20" rx="10" fill="#f7e7c8"/>
+          <rect x="182" y="210" width="58" height="20" rx="10" fill="#f7e7c8"/>
+          <circle cx="296" cy="190" r="16" fill="none" stroke="#c8811f" stroke-width="3.4"/>
+          <path d="M289 190l5 5 9-10" fill="none" stroke="#c8811f" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <g transform="translate(58 214)">
+          <rect x="0" y="0" width="94" height="62" rx="10" fill="url(#g2)" stroke="#d9d4c7"/>
+          <circle cx="22" cy="24" r="7" fill="#c8811f"/>
+          <rect x="12" y="40" width="60" height="7" rx="3.5" fill="#cbbd97"/>
+        </g>
+        <g transform="translate(288 236)">
+          <rect x="0" y="0" width="82" height="56" rx="9" fill="#ffffff" stroke="#d9d4c7"/>
+          <path d="M14 18h54M14 28h54M14 38h34" stroke="#3f6354" stroke-width="4" stroke-linecap="round" opacity=".55"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="layout">
+<main id="main">
+
+  <!-- 领域概览 -->
+  <section class="block" id="overview">
+    <div class="block-head">
+      <h2>发布概览：通道、规格与审核节奏</h2>
+      <span class="sub">2026 年 11 月版 · 含 13 个在审分类</span>
+    </div>
+    <div class="overview-grid">
+      <div class="ov-card">
+        <div class="num">CHANNEL 01</div>
+        <h3>独立漫画发布</h3>
+        <p>支持单话 16—48 页，需附分镜页数与完成度说明。今日在审 27 部，最快 1 个工作日出复核结果。</p>
+      </div>
+      <div class="ov-card">
+        <div class="num">CHANNEL 02</div>
+        <h3>同人志授权声明</h3>
+        <p>须填原作名、作者名与授权类型。模板 v2.3 于 11 月 8 日启用，旧版 v2.2 提交件仍按原规则处理。</p>
+      </div>
+      <div class="ov-card">
+        <div class="num">CHANNEL 03</div>
+        <h3>插画集与设定集</h3>
+        <p>竖版封面 1200×1600 像素，单张 ≤5MB。设定集额外提交来源清单，角色设定需标注首次公开日期。</p>
+      </div>
+      <div class="ov-card wide">
+        <div class="num" style="flex-shrink:0">SPEC</div>
+        <p>四档规格：单页 JPG/PNG、整册 PDF、条漫长图（宽 ≤1080px）、分镜包 ZIP（≤300MB）。系统查重与规格检测在提交后 30 分钟内给出结果，未通过时附具体条目编号。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 精选内容推荐 -->
+  <section class="block" id="picks">
+    <div class="block-head">
+      <h2>精选作品推荐</h2>
+      <a class="more-link" href="#cats">按分类浏览</a>
+    </div>
+    <div class="pick-grid">
+      <article class="pick-main">
+        <img src="https://picsum.photos/seed/penbox-pick-blackcat/720/400" width="720" height="400" loading="lazy" alt="短篇漫画《黑猫邮差》第3话内页，邮差站在雨夜街灯下" style="object-fit:cover">
+        <div class="body">
+          <h3>《黑猫邮差》第 3 话：雨夜投递</h3>
+          <p>作者「南枝」10 月 26 日提交，11 月 2 日完成人工复核。全篇 32 页，铅笔线稿加双色网点，附 6 页分镜说明。编辑批注集中在第 14 页的视线引导与第 27 页的拟声词排版。</p>
+          <div class="pick-meta">
+            <span>独立漫画</span><span>32 页</span><span>双色网点</span><span>复核 5 天</span>
+          </div>
+        </div>
+      </article>
+      <div class="pick-side">
+        <a class="pick-item" href="#cats">
+          <div class="idx">01</div>
+          <div><h4>插画集《潮汐刻度》</h4><p>24 张海洋主题插画，附色卡编号与绘制时长</p></div>
+        </a>
+        <a class="pick-item" href="#cats">
+          <div class="idx">02</div>
+          <div><h4>设定集《雾港档案》</h4><p>角色 12 名、场景 8 组，来源清单已归档</p></div>
+        </a>
+        <a class="pick-item" href="#cats">
+          <div class="idx">03</div>
+          <div><h4>同人志《旧唱片侧写》</h4><p>原作授权类型为「非商业二次创作」，附声明</p></div>
+        </a>
+        <a class="pick-item" href="#cats">
+          <div class="idx">04</div>
+          <div><h4>条漫《便利店深夜班》</h4><p>长图宽 1080px，共 9 话一次性提交</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最新更新 -->
+  <section class="block" id="updates">
+    <div class="block-head">
+      <h2>最新更新</h2>
+      <span class="sub">按提交时间倒序 · 今日 6 条</span>
+    </div>
+    <ul class="updates">
+      <li><time datetime="2026-11-08">11-08</time><span class="txt">《雾港档案》设定集通过人工复核<small>角色设定补交来源清单</small></span><span class="badge">已通过</span></li>
+      <li><time datetime="2026-11-08">11-08</time><span class="txt">同人志授权声明模板升至 v2.3<small>新增「改编范围」勾选项</small></span><span class="badge">规则</span></li>
+      <li><time datetime="2026-11-07">11-07</time><span class="txt">《便利店深夜班》第 7—9 话合并提交<small>条漫长图规格检测用时 22 分钟</small></span><span class="badge">在审</span></li>
+      <li><time datetime="2026-11-06">11-06</time><span class="txt">《潮汐刻度》封面被退回<small>原因：封面右下带第三方平台水印</small></span><span class="badge" style="background:#b4534b">退回</span></li>
+      <li><time datetime="2026-11-05">11-05</time><span class="txt">分镜包 ZIP 上限由 200MB 调至 300MB<small>适用于 11 月 5 日 14:00 后的提交件</small></span><span class="badge">规则</span></li>
+      <li><time datetime="2026-11-03">11-03</time><span class="txt">《黑猫邮差》第 3 话上线展示<small>作者南枝，复核用时 5 天</small></span><span class="badge">已上线</span></li>
+    </ul>
+  </section>
+
+  <!-- 分类入口 -->
+  <section class="block" id="cats">
+    <div class="block-head">
+      <h2>分类入口</h2>
+      <span class="sub">13 个在审分类 · 点击进入对应说明</span>
+    </div>
+    <div class="cat-index">
+      <a href="#guide"><b>短篇漫画</b><span>16—48 页 · 在审 27 部</span></a>
+      <a href="#guide"><b>连载条漫</b><span>宽 ≤1080px · 在审 19 部</span></a>
+      <a href="#guide"><b>单幅插画</b><span>JPG/PNG · 在审 64 张</span></a>
+      <a href="#guide"><b>插画集</b><span>整册 PDF · 在审 11 册</span></a>
+      <a href="#guide"><b>角色设定集</b><span>需来源清单 · 在审 8 册</span></a>
+      <a href="#guide"><b>场景设定集</b><span>需标注首次公开日期</span></a>
+      <a href="#guide"><b>同人志</b><span>需授权声明 v2.3</span></a>
+      <a href="#guide"><b>原创志</b><span>非商业二次创作以外的原创</span></a>
+      <a href="#guide"><b>分镜稿</b><span>ZIP ≤300MB</span></a>
+      <a href="#guide"><b>封面与扉页</b><span>竖版 1200×1600</span></a>
+      <a href="#guide"><b>短篇图文</b><span>文字为主 · 图 ≤12 张</span></a>
+      <a href="#guide"><b>制作笔记</b><span>流程记录 · 可附截图</span></a>
+      <a href="#guide"><b>合作署名</b><span>多人作品需分工表</span></a>
+    </div>
+  </section>
+
+  <!-- 深度解析 -->
+  <section class="block" id="deep">
+    <div class="block-head">
+      <h2>深度解析：发布规则里的三个真实分歧</h2>
+      <span class="sub">唯一主体阅读区 · 含可核对时间线与说法差异</span>
+    </div>
+    <article class="deep">
+      <div class="kicker">ANALYSIS · 2026-11-08</div>
+      <p>发布通道表面上只是上传入口，实际决定作品命运的往往是三件很具体的事：封面规格、授权声明的勾选方式、以及复审次数的上限。下面三个判断都带反例，可以按条目核对。</p>
+
+      <h3>判断一：封面退回里，水印比尺寸问题更难缠</h3>
+      <p>11 月 1 日至 11 月 8 日，封面类退回合计 14 件，其中 9 件原因是带第三方平台水印，尺寸不符只有 3 件，剩下 2 件为清晰度不足。尺寸问题改一张图就能解决，水印往往牵连整套源文件，需要作者回到原始工程重排。</p>
+      <blockquote><b>可核对项：</b>《潮汐刻度》11 月 6 日退回记录，退回条目编号 CB-1106-04，原因为「封面右下角含第三方平台水印」，同日重新上传后 11 月 7 日通过。</blockquote>
+      <p>反过来说，尺寸不符并非可以轻视。竖版 1200×1600 像素是硬门槛，横版 800×450 像素适用于条漫首图。两者混用会被系统直接拦截，连人工复核都进不去。</p>
+
+      <h3>判断二：授权声明 v2.3 的「改编范围」字段降低了复核返工率</h3>
+      <p>10 月的同人志提交件里，因授权说明不清被退回的有 21 件，占同人志退回总量的一半以上。11 月 8 日启用的 v2.3 模板把「改编范围」拆成剧情改编、角色再设计、跨媒介改编三个勾选项，编辑可以直接按勾选结果判断。</p>
+      <ul>
+        <li>剧情改编：需注明改动幅度，超过原作 30% 的篇幅要附作者说明。</li>
+        <li>角色再设计：需附新旧对照，至少 2 张设定图。</li>
+        <li>跨媒介改编：目前仅接受图文转条漫，其他形态暂不受理。</li>
+      </ul>
+      <p>说法差异出现在作者侧：有人把 v2.3 理解成「授权门槛提高」，实际规则没有新增材料要求，只是把原先写在备注里的信息做成了结构化字段。旧模板 v2.2 的提交件按原规则处理，不会因为模板更新被要求重交。</p>
+
+      <h3>判断三：复审上限两次，倒逼作者一次性补齐材料</h3>
+      <p>同一稿件 30 天内退回复审不超过两次，这条规则从 9 月 15 日执行至今。对比 9 月与 10 月的数据：9 月平均每稿复审 1.7 次，10 月降到 1.2 次，退回一次就通过的稿件比例从 41% 升到 58%。</p>
+      <div class="compare">
+        <div><h4>9 月（规则执行前半月）</h4><span>平均复审 1.7 次</span><span>一次通过率 41%</span><span>单稿平均流转 6.4 天</span></div>
+        <div><h4>10 月（规则完整月）</h4><span>平均复审 1.2 次</span><span>一次通过率 58%</span><span>单稿平均流转 5.1 天</span></div>
+      </div>
+      <p>落到操作层面，作者在提交前应把来源清单、授权声明、分工表三样材料与稿件一并上传。漏传任何一项都会消耗一次复审机会，第三次退回只能等下个月重新提交。</p>
+    </article>
+  </section>
+
+  <!-- 体验指南 -->
+  <section class="block" id="guide">
+    <div class="block-head">
+      <h2>发布体验指南：四步走完提交流程</h2>
+      <span class="sub">适用于短篇漫画、插画集、同人志三类</span>
+    </div>
+    <ol class="steps">
+      <li><b>确认分类与规格</b><span>短篇漫画选「16—48 页」，条漫选「宽 ≤1080px 长图」；规格选错会在系统检测阶段被拦截，不消耗复审次数。</span></li>
+      <li><b>上传稿件与封面</b><span>竖版封面 1200×1600 像素，横版 800×450 像素；单张 ≤5MB，禁止第三方平台水印，封面与内页分开上传。</span></li>
+      <li><b>填写授权与来源材料</b><span>同人志勾选 v2.3 改编范围；设定集附来源清单；合作作品附分工表，写明每人负责页数区间。</span></li>
+      <li><b>等待双道审核</b><span>系统查重 30 分钟内完成，人工复核 1—3 个工作日；结果以短信通知，退回时附具体条目编号与修改建议。</span></li>
+    </ol>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block" id="faq">
+    <div class="block-head">
+      <h2>常见问题</h2>
+      <span class="sub">按提交频率排序 · 答案可折叠</span>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>笔盒在线发布入口支持哪些作品类型？</summary>
+        <div class="ans">目前开放独立漫画、同人志、插画集、设定集、短篇图文五类。设定集需附作品来源与授权说明，同人志需注明原作名称与改编范围。分镜稿作为附件随主稿件提交，不单独占用分类名额。</div>
+      </details>
+      <details>
+        <summary>发布一篇作品要经过几道审核？</summary>
+        <div class="ans">两道。系统查重与规格检测在提交后 30 分钟内完成，人工复核由编辑在 1 至 3 个工作日内处理。涉及授权材料的稿件，排期以短信通知为准，最早可当天出结果。</div>
+      </details>
+      <details>
+        <summary>封面图尺寸有什么要求？</summary>
+        <div class="ans">竖版封面推荐 1200×1600 像素，横版 800×450 像素，单张不超过 5MB，格式为 JPG 或 PNG。禁止带第三方平台水印，封面右下角不要放置二维码。</div>
+      </details>
+      <details>
+        <summary>被退回的稿件还能重新提交吗？</summary>
+        <div class="ans">可以。退回时会附具体条目编号与原因，修改后在同一入口重新上传。同一稿件 30 天内退回复审不超过两次，超过后需等下个月重新提交。</div>
+      </details>
+      <details>
+        <summary>同人志授权声明 v2.3 比旧版多了什么？</summary>
+        <div class="ans">新增「改编范围」三个勾选项：剧情改编、角色再设计、跨媒介改编。规则没有新增材料要求，只是把原先写在备注里的信息做成结构化字段，编辑据此直接判断。</div>
+      </details>
+      <details>
+        <summary>条漫长图的宽度上限是多少？</summary>
+        <div class="ans">宽不超过 1080 像素，单张高度建议不超过 8000 像素。超过高度上限的长图会被系统切段检测，切段位置需保留完整分格，不要横切对话框。</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- 用户评论 -->
+  <section class="block" id="comments">
+    <div class="block-head">
+      <h2>读者与作者反馈</h2>
+      <span class="sub">含中性评价与具体吐槽 · 11 月 3 日至 8 日</span>
+    </div>
+    <div class="comments">
+      <div class="cmt">
+        <div class="who"><span class="ava">南</span><b>南枝</b><time datetime="2026-11-05">11-05</time></div>
+        <p>《黑猫邮差》第 3 话复核 5 天出结果，编辑批注写在第 14 页视线引导的位置，比预期具体。唯一想改的是<em>批注只能看不能回</em>，想解释一下分镜意图没地方写。</p>
+        <span class="ref">指向《黑猫邮差》第 3 话</span>
+      </div>
+      <div class="cmt">
+        <div class="who"><span class="ava">潮</span><b>潮汐刻度</b><time datetime="2026-11-07">11-07</time></div>
+        <p>封面被退回一次，确实是我自己带的水印，没话讲。重新排图花了半天，<em>提示语只写「含第三方平台水印」，没标具体位置</em>，得自己一寸寸找。</p>
+        <span class="ref">指向《潮汐刻度》封面</span>
+      </div>
+      <div class="cmt">
+        <div class="who"><span class="ava">雾</span><b>雾港档案</b><time datetime="2026-11-08">11-08</time></div>
+        <p>设定集的来源清单模板挺省事，12 个角色一次填完。跨媒介改编那个勾选项目前用不上，观望一下后续会不会放开图文转条漫之外的类型。</p>
+        <span class="ref">指向《雾港档案》设定集</span>
+      </div>
+      <div class="cmt">
+        <div class="who"><span class="ava">便</span><b>深夜班值班员</b><time datetime="2026-11-06">11-06</time></div>
+        <p>条漫第 7—9 话合并提交，22 分钟出系统检测结果，速度可以。但<em>长图高度超过 8000 像素会被切段</em>，我第 8 话被切在对话框中间，只能重排。</p>
+        <span class="ref">指向《便利店深夜班》第 8 话</span>
+      </div>
+      <div class="cmt">
+        <div class="who"><span class="ava">旧</span><b>旧唱片侧写</b><time datetime="2026-11-04">11-04</time></div>
+        <p>v2.3 模板勾「剧情改编」后，系统提示超过 30% 要附作者说明。我这部改动幅度大概 20%，勾完直接过，不用写说明。规则清楚就好办。</p>
+        <span class="ref">指向同人志《旧唱片侧写》</span>
+      </div>
+      <div class="cmt">
+        <div class="who"><span class="ava">路</span><b>路过的读者</b><time datetime="2026-11-03">11-03</time></div>
+        <p>作为读者，我比较在意分类页里「制作笔记」和「分镜稿」混在一起。想找过程记录的时候得翻两页，希望以后能单独拆出来。</p>
+        <span class="ref">指向分类页结构</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 相关资讯 -->
+  <section class="block" id="news">
+    <div class="block-head">
+      <h2>相关资讯</h2>
+      <a class="more-link" href="#timeline">查看排期时间线</a>
+    </div>
+    <div class="news-grid">
+      <article class="news-item">
+        <img src="https://picsum.photos/seed/penbox-news-zip/480/260" width="480" height="260" loading="lazy" alt="分镜包 ZIP 上传进度界面截图，进度条显示 78%" style="object-fit:cover">
+        <div class="body">
+          <h3>分镜包 ZIP 上限调至 300MB</h3>
+          <p>11 月 5 日 14:00 起，分镜包、整册 PDF 等附件类上传上限从 200MB 提到 300MB，适用于此后提交的稿件，此前已提交的按原上限处理。</p>
+          <time datetime="2026-11-05">11-05 · 规则调整</time>
+        </div>
+      </article>
+      <article class="news-item">
+        <img src="https://picsum.photos/seed/penbox-news-template/480/260" width="480" height="260" loading="lazy" alt="同人志授权声明模板 v2.3 的勾选界面，三个改编范围选项并排" style="object-fit:cover">
+        <div class="body">
+          <h3>授权声明模板 v2.3 正式启用</h3>
+          <p>11 月 8 日上线，新增剧情改编、角色再设计、跨媒介改编三个勾选项。v2.2 提交件不会被要求重交，按原规则走完流程。</p>
+          <time datetime="2026-11-08">11-08 · 模板更新</time>
+        </div>
+      </article>
+      <article class="news-item">
+        <img src="https://picsum.photos/seed/penbox-news-review/480/260" width="480" height="260" loading="lazy" alt="人工复核工作台界面，左侧稿件缩略图，右侧批注栏" style="object-fit:cover">
+        <div class="body">
+          <h3>人工复核通道 11 月排班公布</h3>
+          <p>11 月 9 日至 15 日，插画集与设定集复核集中在周一、周四，短篇漫画每日开放。遇节假日顺延一个工作日。</p>
+          <time datetime="2026-11-07">11-07 · 排期</time>
+        </div>
+      </article>
+      <article class="news-item">
+        <img src="https://picsum.photos/seed/penbox-news-stats/480/260" width="480" height="260" loading="lazy" alt="10 月发布月度统计图表，一次通过率柱状图" style="object-fit:cover">
+        <div class="body">
+          <h3>10 月发布数据：一次通过率 58%</h3>
+          <p>10 月共收到提交 214 件，通过 156 件。复审上限两次执行后，单稿平均流转时间从 9 月的 6.4 天降到 5.1 天。</p>
+          <time datetime="2026-11-02">11-02 · 数据</time>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 相关推荐标签 -->
+  <section class="block" id="tags">
+    <div class="block-head">
+      <h2>相关推荐</h2>
+      <span class="sub">按搜索热度排列</span>
+    </div>
+    <div class="tags">
+      <a href="#guide">短篇漫画发布流程</a>
+      <a href="#faq">封面尺寸 1200×1600</a>
+      <a href="#faq">同人志授权声明模板</a>
+      <a href="#guide">条漫长图宽度上限</a>
+      <a href="#updates">分镜包 ZIP 300MB</a>
+      <a href="#deep">复审两次上限</a>
+      <a href="#cats">角色设定集来源清单</a>
+      <a href="#guide">合作作品分工表</a>
+      <a href="#comments">人工复核批注</a>
+      <a href="#cats">插画集整册 PDF</a>
+    </div>
+  </section>
+
+  <!-- 时间线 -->
+  <section class="block" id="timeline">
+    <div class="block-head">
+      <h2>排期时间线</h2>
+      <span class="sub">11 月 1 日至 11 月 12 日可核对节点</span>
+    </div>
+    <ul class="timeline">
+      <li><time datetime="2026-11-01">11-01</time><b>10 月月度统计对外公布</b><p>提交 214 件，通过 156 件，一次通过率 58%。</p></li>
+      <li><time datetime="2026-11-02">11-02</time><b>《黑猫邮差》第 3 话完成人工复核</b><p>编辑批注 6 条，集中在第 14 页与第 27 页。</p></li>
+      <li><time datetime="2026-11-05">11-05</time><b>ZIP 附件上限调整生效</b><p>14:00 起新提交件适用 300MB，旧件不回溯。</p></li>
+      <li><time datetime="2026-11-06">11-06</time><b>《潮汐刻度》封面退回</b><p>条目 CB-1106-04，原因：第三方平台水印。</p></li>
+      <li><time datetime="2026-11-08">11-08</time><b>同人志授权声明 v2.3 启用</b><p>三个改编范围勾选项上线，v2.2 件不重交。</p></li>
+      <li><time datetime="2026-11-09">11-09</time><b>下周复核排班开始</b><p>插画集与设定集集中在周一、周四处理。</p></li>
+    </ul>
+  </section>
+
+</main>
+
+<aside aria-label="辅助信息">
+  <div class="side-card">
+    <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>栏目导航</h3>
+    <nav class="side-nav" aria-label="侧栏导航">
+      <a href="#overview">发布概览</a>
+      <a href="#picks">精选作品</a>
+      <a href="#updates">最新更新</a>
+      <a href="#cats">分类入口</a>
+      <a href="#deep">深度解析</a>
+      <a href="#guide">发布指南</a>
+      <a href="#faq">常见问题</a>
+      <a href="#comments">读者反馈</a>
+      <a href="#news">相关资讯</a>
+      <a href="#tags">相关推荐</a>
+      <a href="#timeline">排期时间线</a>
+    </nav>
+  </div>
+  <div class="side-card">
+    <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l2.6 5.6L21 9.4l-4.5 4.3 1.1 6.3L12 17l-5.6 3 1.1-6.3L3 9.4l6.4-.8z"/></svg>本周在审排行</h3>
+    <ul class="rank-list">
+      <li><span class="n">1</span><div><a href="#picks">《黑猫邮差》第 3 话</a><small>独立漫画 · 已上线</small></div></li>
+      <li><span class="n">2</span><div><a href="#picks">《便利店深夜班》第 7—9 话</a><small>条漫 · 在审</small></div></li>
+      <li><span class="n">3</span><div><a href="#picks">《雾港档案》设定集</a><small>设定集 · 已通过</small></div></li>
+      <li><span class="n">4</span><div><a href="#picks">《潮汐刻度》插画集</a><small>插画集 · 封面复审</small></div></li>
+      <li><span class="n">5</span><div><a href="#picks">《旧唱片侧写》同人志</a><small>同人志 · 在审</small></div></li>
+    </ul>
+  </div>
+  <div class="side-card">
+    <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5l3 2"/></svg>提交前检查</h3>
+    <p class="side-note">
+      <b>封面</b>：竖版 1200×1600，无水印<br>
+      <b>授权</b>：同人志勾 v2.3 改编范围<br>
+      <b>来源</b>：设定集附来源清单<br>
+      <b>分工</b>：多人作品写清页数区间<br>
+      <b>附件</b>：ZIP ≤300MB，长图宽 ≤1080px
+    </p>
+  </div>
+</aside>
+</div>
+
+<button id="toTop" aria-label="回到页面顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<footer class="site">
+  <div class="foot-in">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect x="6" y="14" width="52" height="36" rx="8" fill="#f2c14e"/>
+            <rect x="14" y="23" width="36" height="18" rx="4" fill="none" stroke="#2f4a3f" stroke-width="3.4"/>
+            <circle cx="32" cy="32" r="5" fill="#2f4a3f"/>
+          </svg>
+          <b>笔盒在线发布入口</b>
+        </div>
+        <p class="foot-desc">把分类、规格、授权材料与审核节奏摊开写的发布说明页，作者按条目核对，编辑按字段判断。</p>
+      </div>
+      <div class="foot-col">
+        <h4>发布通道</h4>
+        <a href="#guide">短篇漫画</a>
+        <a href="#guide">连载条漫</a>
+        <a href="#guide">插画集</a>
+        <a href="#guide">角色设定集</a>
+        <a href="#guide">同人志</a>
+      </div>
+      <div class="foot-col">
+        <h4>规则与材料</h4>
+        <a href="#deep">复审上限说明</a>
+        <a href="#faq">封面尺寸要求</a>
+        <a href="#faq">授权声明 v2.3</a>
+        <a href="#updates">附件上限调整</a>
+        <a href="#guide">分工表填写</a>
+      </div>
+      <div class="foot-col">
+        <h4>浏览与反馈</h4>
+        <a href="#picks">精选作品</a>
+        <a href="#comments">作者反馈</a>
+        <a href="#news">行业资讯</a>
+        <a href="#timeline">排期时间线</a>
+        <a href="#tags">相关推荐</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>页面内作品、作者与条目编号均为示例数据，用于说明发布流程，不指向真实版权归属。正文可核对更新项：11 月 8 日授权声明 v2.3、11 月 5 日附件上限调整、11 月 6 日封面退回记录。</span>
+      <span>更新时间 2026-11-08 · <b>© 2026 笔盒在线发布入口</b></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var menuBtn=document.getElementById('menuBtn');
+  var topNav=document.getElementById('topNav');
+  if(menuBtn&&topNav){
+    menuBtn.addEventListener('click',function(){
+      var open=topNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded',open?'true':'false');
+      menuBtn.setAttribute('aria-label',open?'收起导航菜单':'展开导航菜单');
+    });
+    topNav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'&&window.innerWidth<=820){
+        topNav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var toTop=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>420){toTop.classList.add('show');}else{toTop.classList.remove('show');}
+  },{passive:true});
+  toTop.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  var links=Array.prototype.slice.call(document.querySelectorAll('.side-nav a'));
+  var sections=links.map(function(a){return document.querySelector(a.getAttribute('href'));}).filter(Boolean);
+  if('IntersectionObserver' in window&&sections.length){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          links.forEach(function(l){l.classList.remove('active');});
+          var i=sections.indexOf(en.target);
+          if(i>-1){links[i].classList.add('active');}
+        }
+      });
+    },{rootMargin:'-140px 0px -60% 0px',threshold:0});
+    sections.forEach(function(s){io.observe(s);});
+  }
+
+  var input=document.getElementById('searchInput');
+  var out=document.getElementById('searchOut');
+  var index=[
+    {t:'发布概览：通道、规格与审核节奏',id:'overview',k:'通道 规格 审核 分类'},
+    {t:'精选作品推荐',id:'picks',k:'黑猫邮差 潮汐刻度 雾港档案 便利店深夜班 旧唱片侧写'},
+    {t:'最新更新',id:'updates',k:'模板 v2.3 ZIP 300MB 退回 上线'},
+    {t:'分类入口',id:'cats',k:'短篇漫画 连载条漫 插画集 设定集 同人志 分镜稿'},
+    {t:'深度解析',id:'deep',k:'封面水印 授权声明 复审上限 数据对比'},
+    {t:'发布体验指南',id:'guide',k:'四步 上传 封面 授权 审核'},
+    {t:'常见问题',id:'faq',k:'作品类型 审核 封面尺寸 退回 条漫宽度'},
+    {t:'读者与作者反馈',id:'comments',k:'批注 退回 长图切段 改编范围'},
+    {t:'相关资讯',id:'news',k:'ZIP上限 模板 排班 月度数据'},
+    {t:'相关推荐',id:'tags',k:'标签 搜索 热度'},
+    {t:'排期时间线',id:'timeline',k:'11月 节点 排班'}
+  ];
+  function render(q){
+    if(!q){out.classList.remove('show');out.innerHTML='';return;}
+    var ql=q.toLowerCase();
+    var hit=index.filter(function(it){
+      return it.t.toLowerCase().indexOf(ql)>-1||it.k.toLowerCase().indexOf(ql)>-1;
+    });
+    out.innerHTML='';
+    if(!hit.length){
+      var p=document.createElement('p');
+      p.className='empty';
+      p.textContent='没有找到与「'+q+'」相关的内容，可试试“封面尺寸”“授权声明”“复审”等词。';
+      out.appendChild(p);
+    }else{
+      hit.slice(0,6).forEach(function(it){
+        var a=document.createElement('a');
+        a.href='#'+it.id;
+        a.textContent=it.t;
+        out.appendChild(a);
+      });
+    }
+    out.classList.add('show');
+  }
+  if(input&&out){
+    input.addEventListener('input',function(){render(input.value.trim());});
+    input.addEventListener('keydown',function(e){
+      if(e.key==='Enter'){e.preventDefault();render(input.value.trim());}
+      if(e.key==='Escape'){input.value='';render('');}
+    });
+    document.addEventListener('click',function(e){
+      if(!e.target.closest('.search')){out.classList.remove('show');}
+    });
+    out.addEventListener('click',function(e){
+      if(e.target.tagName==='A'){out.classList.remove('show');input.value='';}
+    });
+  }
+})();
+</script>
+</body>
+  </html>
